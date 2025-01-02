@@ -1,10 +1,23 @@
-import { setupDevPlatform } from "@cloudflare/next-on-pages/next-dev"
-
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+import createMDX from '@next/mdx'
+import remarkGfm from 'remark-gfm'
 
-if (process.env.NODE_ENV === "development") {
-	await setupDevPlatform()
+const nextConfig = {
+	pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+	images: {
+		remotePatterns: [
+			{
+				protocol: "https",
+				hostname: "github.com",
+			},
+		],
+	},
 }
 
-export default nextConfig
+const withMDX = createMDX({
+	extension: /\.mdx$/,
+	remarkPlugins: [remarkGfm],
+	rehypePlugins: [],
+})
+
+  export default withMDX(nextConfig)

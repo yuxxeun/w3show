@@ -4,7 +4,6 @@ import { useEffect, useState } from "react"
 
 import { ThemeSwitcher } from "@/components/theme-switcher"
 import {
-	IconApple,
 	IconArrowUpRight,
 	IconBrandGithub,
 	IconBrandJustd,
@@ -12,8 +11,11 @@ import {
 	IconColors,
 	IconColorSwatch,
 	IconCube,
-	IconHome,
-	IconTelephone,
+	IconDashboard,
+	IconFileLink,
+	IconFolderLinkFill,
+	IconGear,
+	IconGuide,
 } from "justd-icons"
 import { usePathname } from "next/navigation"
 import { buttonStyles, Link, Menu, Navbar } from "ui"
@@ -27,24 +29,31 @@ export function AppNavbar({ children, ...props }: React.ComponentProps<typeof Na
 		<Navbar isSticky isOpen={isOpen} onOpenChange={setIsOpen} {...props}>
 			<Navbar.Nav>
 				<Navbar.Logo className="text-fg" href="/">
-					<IconBrandJustd />
+					<IconFolderLinkFill className="size-5" />
+					<p className="text-lg font-bold ">
+						WebShowCase
+					</p>
 				</Navbar.Logo>
 				<Navbar.Section>
 					<Navbar.Item isCurrent={pathname === "/"} href="/">
-						<IconHome className="inline size-4 lg:hidden" />
+						<IconDashboard className="inline size-4 lg:hidden" />
 						Home
 					</Navbar.Item>
-					<Navbar.Item isCurrent={pathname === "/about"} href="/about">
-						<IconApple className="inline size-4 lg:hidden" />
-						About
+					<Navbar.Item isCurrent={pathname === "/portfolios"} href="/portfolios">
+						<IconFileLink className="inline size-4 lg:hidden" />
+						Portfolios
 					</Navbar.Item>
-					<Navbar.Item isCurrent={pathname === "/contact"} href="/contact">
-						<IconTelephone className="inline size-4 lg:hidden" />
-						Contact
+					<Navbar.Item isCurrent={pathname === "/guide"} href="/guide">
+						<IconGuide className="inline size-4 lg:hidden" />
+						Guide
+					</Navbar.Item>
+					<Navbar.Item isCurrent={pathname === "/ontributors"} href="/contributors">
+						<IconGear className="inline size-4 lg:hidden" />
+						Contributors
 					</Navbar.Item>
 					<Menu>
 						<Navbar.Item className="group">
-							Resources...
+							Resources
 							<IconChevronDown className="ml-2 size-4 duration-200 group-data-pressed:rotate-180" />
 						</Navbar.Item>
 						<Menu.Content className="sm:min-w-48">
@@ -82,25 +91,10 @@ export function AppNavbar({ children, ...props }: React.ComponentProps<typeof Na
 						>
 							<IconBrandGithub />
 						</Link>
-						<Link
-							aria-label="Goto getjustd.com"
-							className={buttonStyles({ appearance: "outline", size: "square-petite" })}
-							target="_blank"
-							href="https://justd.co"
-						>
-							<IconBrandJustd />
-						</Link>
-						<Navbar.Item
-							className={buttonStyles({ appearance: "outline", size: "small" })}
-							isCurrent={pathname === "/login"}
-							href="/login"
-						>
-							Login
-						</Navbar.Item>
 					</Navbar.Flex>
 				</Navbar.Section>
 			</Navbar.Nav>
-			<Navbar.Compact>
+			<Navbar.Compact className="sticky top-0 z-10">
 				<Navbar.Flex>
 					<Navbar.Trigger className="-ml-2" />
 				</Navbar.Flex>
@@ -114,20 +108,6 @@ export function AppNavbar({ children, ...props }: React.ComponentProps<typeof Na
 						>
 							<IconBrandGithub />
 						</Link>
-						<Link
-							aria-label="Goto getjustd.com"
-							className={buttonStyles({ appearance: "outline", size: "square-petite" })}
-							href="https://getjustd.com"
-						>
-							<IconBrandJustd />
-						</Link>
-						<Navbar.Item
-							className={buttonStyles({ appearance: "outline", size: "small" })}
-							isCurrent={pathname === "/login"}
-							href="/login"
-						>
-							Login
-						</Navbar.Item>
 					</Navbar.Flex>
 				</Navbar.Flex>
 			</Navbar.Compact>
