@@ -8,10 +8,12 @@ import {
 	IconArrowUpRight,
 	IconBrandGithub,
 	IconBrandJustd,
+	IconBrandLayers,
 	IconChevronDown,
 	IconColors,
 	IconColorSwatch,
 	IconCube,
+	IconDashboard,
 	IconHome,
 	IconTelephone,
 } from "justd-icons"
@@ -26,21 +28,25 @@ export function AppNavbar({ children, ...props }: React.ComponentProps<typeof Na
 	return (
 		<Navbar isSticky isOpen={isOpen} onOpenChange={setIsOpen} {...props}>
 			<Navbar.Nav>
-				<Navbar.Logo className="text-fg" href="/">
-					<IconBrandJustd />
+				<Navbar.Logo className="text-fg items-stretch" href="/">
+					<IconBrandLayers className="size-5" />
+					<span className="font-bold">
+						WebShowcase
+					</span>
 				</Navbar.Logo>
 				<Navbar.Section>
-					<Navbar.Item isCurrent={pathname === "/"} href="/">
-						<IconHome className="inline size-4 lg:hidden" />
-						Home
-					</Navbar.Item>
-					<Navbar.Item isCurrent={pathname === "/about"} href="/about">
+					
+					<Navbar.Item isCurrent={pathname === "/portfolio"} href="/portfolio">
 						<IconApple className="inline size-4 lg:hidden" />
-						About
+						Portfolio
 					</Navbar.Item>
-					<Navbar.Item isCurrent={pathname === "/contact"} href="/contact">
+					<Navbar.Item isCurrent={pathname === "/guide"} href="/guide">
+						<IconApple className="inline size-4 lg:hidden" />
+						Guide
+					</Navbar.Item>
+					<Navbar.Item isCurrent={pathname === "/contributors"} href="/contributors">
 						<IconTelephone className="inline size-4 lg:hidden" />
-						Contact
+						Contributors
 					</Navbar.Item>
 					<Menu>
 						<Navbar.Item className="group">
@@ -48,9 +54,9 @@ export function AppNavbar({ children, ...props }: React.ComponentProps<typeof Na
 							<IconChevronDown className="ml-2 size-4 duration-200 group-data-pressed:rotate-180" />
 						</Navbar.Item>
 						<Menu.Content className="sm:min-w-48">
-							<Menu.Item target="_blank" href="https://getjustd.com/components">
-								<IconCube />
-								Components
+						<Menu.Item target="_blank" href="https://getjustd.com/icons">
+								<IconBrandJustd />
+								Github
 								<IconArrowUpRight className="ml-auto" />
 							</Menu.Item>
 							<Menu.Item target="_blank" href="https://getjustd.com/icons">
@@ -58,14 +64,9 @@ export function AppNavbar({ children, ...props }: React.ComponentProps<typeof Na
 								Icons
 								<IconArrowUpRight className="ml-auto" />
 							</Menu.Item>
-							<Menu.Item target="_blank" href="https://getjustd.com/themes">
-								<IconColors />
-								Themes
-								<IconArrowUpRight className="ml-auto" />
-							</Menu.Item>
-							<Menu.Item target="_blank" href="https://getjustd.com/colors">
-								<IconColorSwatch />
-								Colors
+							<Menu.Item target="_blank" href="https://getjustd.com/icons">
+								<IconBrandJustd />
+								Design System
 								<IconArrowUpRight className="ml-auto" />
 							</Menu.Item>
 						</Menu.Content>
@@ -82,21 +83,6 @@ export function AppNavbar({ children, ...props }: React.ComponentProps<typeof Na
 						>
 							<IconBrandGithub />
 						</Link>
-						<Link
-							aria-label="Goto getjustd.com"
-							className={buttonStyles({ appearance: "outline", size: "square-petite" })}
-							target="_blank"
-							href="https://justd.co"
-						>
-							<IconBrandJustd />
-						</Link>
-						<Navbar.Item
-							className={buttonStyles({ appearance: "outline", size: "small" })}
-							isCurrent={pathname === "/login"}
-							href="/login"
-						>
-							Login
-						</Navbar.Item>
 					</Navbar.Flex>
 				</Navbar.Section>
 			</Navbar.Nav>
@@ -114,20 +100,6 @@ export function AppNavbar({ children, ...props }: React.ComponentProps<typeof Na
 						>
 							<IconBrandGithub />
 						</Link>
-						<Link
-							aria-label="Goto getjustd.com"
-							className={buttonStyles({ appearance: "outline", size: "square-petite" })}
-							href="https://getjustd.com"
-						>
-							<IconBrandJustd />
-						</Link>
-						<Navbar.Item
-							className={buttonStyles({ appearance: "outline", size: "small" })}
-							isCurrent={pathname === "/login"}
-							href="/login"
-						>
-							Login
-						</Navbar.Item>
 					</Navbar.Flex>
 				</Navbar.Flex>
 			</Navbar.Compact>

@@ -8,7 +8,6 @@ import { Button, Card, Checkbox, Form, Link, TextField } from "ui"
 export function LoginForm() {
 	const submit = (e: FormEvent) => {
 		e.preventDefault()
-
 		toast.success("Login Successful")
 	}
 	return (
