@@ -1,5 +1,7 @@
 import { Header } from "@/components/header"
+import { Container } from "@/components/container"
 import type { Metadata } from "next"
+import Welcome from "@/components/section/guide/content.mdx"
 
 export const metadata: Metadata = {
 	title: "Guide",
@@ -9,10 +11,12 @@ export default function Page() {
 	return (
 		<div className="py-6">
 			<Header
-				title="Guide"
-				description="Acme is a leading software house dedicated to delivering innovative and custom software solutions. Our team of experienced developers and designers work closely with clients to bring their ideas to life, ensuring high-quality products that meet their business needs.
-"
+				title="Contribution Guidelines"
+				description="This documentation contains a set of guidelines to help you during the contribution process of this project."
 			/>
+			<Container>
+				<Welcome />
+			</Container>
 		</div>
 	)
 }

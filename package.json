@@ -1,14 +1,14 @@
 {
-	"name": "next-js",
+	"name": "@yuxxeun/w3show",
 	"version": "1.0.0",
 	"private": true,
-	"repository": "https://github.com/justdlabs/next",
+	"repository": "https://github.com/yuxxeun/w3show",
 	"scripts": {
 		"dev": "next dev --turbopack",
 		"build": "next build",
 		"start": "next start",
 		"lint": "biome lint --fix",
-		"format": "bun run lint && biome format --write"
+		"format": "biome format --write"
 	},
 	"dependencies": {
 		"@mdx-js/loader": "^3.1.0",
@@ -18,12 +18,16 @@
 		"@types/react": "^19.0.2",
 		"@types/react-dom": "^19.0.2",
 		"cmdk": "^1.0.4",
+		"dayjs": "^1.11.13",
 		"embla-carousel-react": "^8.5.1",
+		"gray-matter": "^4.0.3",
+		"highlight.js": "^11.11.1",
 		"input-otp": "^1.4.1",
 		"justd-icons": "^1.10.8",
 		"motion": "^11.15.0",
 		"next": "^15.1.2",
 		"next-themes": "^0.4.4",
+		"prism": "^4.1.2",
 		"react": "^19.0.0",
 		"react-aria-components": "^1.5.0",
 		"react-dom": "^19.0.0",
@@ -39,5 +43,10 @@
 		"tailwind-variants": "^0.3.0",
 		"tailwindcss": "^4.0.0-beta.8",
 		"typescript": "^5.7.2"
+	},
+	"browser": {
+		"fs": false,
+		"os": false,
+		"path": false
 	}
 }

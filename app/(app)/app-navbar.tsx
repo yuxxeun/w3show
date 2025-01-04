@@ -9,12 +9,10 @@ import {
 	IconBrandGithub,
 	IconBrandJustd,
 	IconBrandLayers,
+	IconBrandParanoid,
 	IconChevronDown,
-	IconColors,
-	IconColorSwatch,
-	IconCube,
 	IconDashboard,
-	IconHome,
+	IconPackage,
 	IconTelephone,
 } from "justd-icons"
 import { usePathname } from "next/navigation"
@@ -30,43 +28,45 @@ export function AppNavbar({ children, ...props }: React.ComponentProps<typeof Na
 			<Navbar.Nav>
 				<Navbar.Logo className="text-fg items-stretch" href="/">
 					<IconBrandLayers className="size-5" />
-					<span className="font-bold">
-						WebShowcase
-					</span>
+					<span className="font-bold">w3show</span>
 				</Navbar.Logo>
 				<Navbar.Section>
-					
+				<Navbar.Item isCurrent={pathname === "/"} href="/" className='lg:hidden'>
+						<IconDashboard className="inline size-4 md:hidden" />
+						Home
+					</Navbar.Item>
 					<Navbar.Item isCurrent={pathname === "/portfolio"} href="/portfolio">
-						<IconApple className="inline size-4 lg:hidden" />
-						Portfolio
+						<IconApple className="inline size-4 md:hidden" />
+						Portfolios
 					</Navbar.Item>
 					<Navbar.Item isCurrent={pathname === "/guide"} href="/guide">
-						<IconApple className="inline size-4 lg:hidden" />
+						<IconApple className="inline size-4 md:hidden" />
 						Guide
 					</Navbar.Item>
 					<Navbar.Item isCurrent={pathname === "/contributors"} href="/contributors">
-						<IconTelephone className="inline size-4 lg:hidden" />
+						<IconTelephone className="inline size-4 md:hidden" />
 						Contributors
 					</Navbar.Item>
 					<Menu>
 						<Navbar.Item className="group">
-							Resources...
+							<IconPackage className="inline size-4 md:hidden" />
+							Resources
 							<IconChevronDown className="ml-2 size-4 duration-200 group-data-pressed:rotate-180" />
 						</Navbar.Item>
 						<Menu.Content className="sm:min-w-48">
-						<Menu.Item target="_blank" href="https://getjustd.com/icons">
+							<Menu.Item target="_blank" href="https://getjustd.com/icons">
+								<IconBrandGithub />
+								Repository
+								<IconArrowUpRight className="ml-auto" />
+							</Menu.Item>
+							<Menu.Item target="_blank" href="https://getjustd.com/">
 								<IconBrandJustd />
-								Github
+								UI Components
 								<IconArrowUpRight className="ml-auto" />
 							</Menu.Item>
 							<Menu.Item target="_blank" href="https://getjustd.com/icons">
-								<IconBrandJustd />
+								<IconBrandParanoid />
 								Icons
-								<IconArrowUpRight className="ml-auto" />
-							</Menu.Item>
-							<Menu.Item target="_blank" href="https://getjustd.com/icons">
-								<IconBrandJustd />
-								Design System
 								<IconArrowUpRight className="ml-auto" />
 							</Menu.Item>
 						</Menu.Content>
