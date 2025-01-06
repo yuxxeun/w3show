@@ -2,7 +2,7 @@ import React from "react"
 
 import { IconBrandGithub, IconBrandTwitter } from "justd-icons"
 import Link from "next/link"
-import dayjs from 'dayjs'
+import dayjs from "dayjs"
 
 const navigation = {
 	social: [
@@ -36,11 +36,8 @@ export function Footer() {
 						))}
 					</div>
 					<p className="mt-8 text-muted-fg text-xs leading-5 md:order-1 md:mt-0">
-						&copy; {dayjs().format('YYYY')} {""}
-						<span className="font-semibold text-fg">
-						 w3show
-						</span>
-						, MIT License.
+						&copy; {dayjs().format("YYYY")} {""}
+						<span className="font-semibold text-fg">w3show</span>, MIT License.
 					</p>
 				</div>
 			</div>

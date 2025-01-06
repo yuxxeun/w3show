@@ -17,7 +17,7 @@ while true; do
     echo "site: https://your_site_here" >> "$FILE_NAME"
     echo "stack: [HTML, JavaScript, CSS, whatever]" >> "$FILE_NAME"
     echo "repo: https://github.com/your_github_profile/repo" >> "$FILE_NAME"
-    echo "image: /your_image.jpg" >> "$FILE_NAME"
+    echo "image: /portfolio/your_image.jpg" >> "$FILE_NAME"
     echo "---" >> "$FILE_NAME"
 
     echo -e "✨ \033[32mSuccessfully created a new file: take a look at $FILE_NAME\033[0m"

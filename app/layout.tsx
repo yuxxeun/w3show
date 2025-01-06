@@ -19,8 +19,7 @@ export const metadata: Metadata = {
 		template: "%s / w3show",
 		default: "w3show",
 	},
-	description:
-		"Portfolio of collection of web development.",
+	description: "Portfolio of collection of web development.",
 }
 
 export default function RootLayout({

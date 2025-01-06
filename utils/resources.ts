@@ -2,9 +2,9 @@ import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
 
-const contentDirectory = path.join(process.cwd(), "content/contributors")
+const contentDirectory = path.join(process.cwd(), "content/resources")
 
-export function getAllContributorsMdxFiles() {
+export function getAllResourcesMdxFiles() {
 	const fileNames = fs.readdirSync(contentDirectory)
 
 	const allMdxData = fileNames.map((fileName) => {
@@ -13,13 +13,13 @@ export function getAllContributorsMdxFiles() {
 		const { data } = matter(fileContent)
 		return {
 			fileName,
-			author: data.author || "",
-			role: data.role || [],
+			title: data.title || "",
+			description: data.description || "",
 			twitter: data.twitter || "",
 			site: data.site || "",
-			stack: data.stack || [],
 			github: data.github || "",
 			image: data.image || "",
+			category: data.category || [],
 		}
 	})
 
