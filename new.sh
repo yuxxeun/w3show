@@ -1,5 +1,4 @@
 #!/bin/bash
-
 mkdir -p content/portfolio
 
 while true; do

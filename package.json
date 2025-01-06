@@ -17,6 +17,7 @@
 		"@types/mdx": "^2.0.13",
 		"@types/react": "^19.0.2",
 		"@types/react-dom": "^19.0.2",
+		"@vercel/analytics": "^1.4.1",
 		"cmdk": "^1.0.4",
 		"dayjs": "^1.11.13",
 		"embla-carousel-react": "^8.5.1",
@@ -48,5 +49,8 @@
 		"fs": false,
 		"os": false,
 		"path": false
+	},
+	"engines": {
+		"node": "20.x"
 	}
 }

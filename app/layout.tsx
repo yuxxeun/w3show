@@ -2,6 +2,7 @@ import { Providers } from "@/components/providers"
 import type { Metadata } from "next"
 import localFont from "next/font/local"
 import { Toast } from "ui"
+import { Analytics } from '@vercel/analytics/next';
 
 import "./globals.css"
 
@@ -31,7 +32,10 @@ export default function RootLayout({
 		<html lang="en" suppressHydrationWarning={true} className={`${fontSans.variable} ${fontMono.variable}`}>
 			<body className="min-h-svh antialiased">
 				<Toast />
-				<Providers>{children}</Providers>
+				<Providers>
+					{children}
+					<Analytics/>
+				</Providers>
 			</body>
 		</html>
 	)
