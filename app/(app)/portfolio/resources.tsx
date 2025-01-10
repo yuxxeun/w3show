@@ -37,7 +37,7 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 								<Image
 									src={frontmatter.image || "https://github.com/basecamp.png"}
 									alt="banner"
-									className="object-cover object-top rounded-lg"
+									className="object-cover object-center rounded-lg"
 									height={786}
 									width={1200}
 								/>
