@@ -10,7 +10,7 @@ export default function AppSidebarNav() {
 	const pathSegments = pathname.replace(/^\/+|\/+$/, "").split("/")
 
 	return (
-		<SidebarNav className="sticky top-0 z-50">
+		<SidebarNav className="sticky top-0 z-50 bg-bg">
 			<span className="flex items-center gap-x-4">
 				<SidebarTrigger className="-mx-2" />
 				<Separator className="@md:block hidden h-6" orientation="vertical" />
