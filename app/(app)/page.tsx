@@ -1,5 +1,3 @@
-import { Header } from "@/components/header"
-
 import { Resources } from "./resources"
 import { Hero } from "@/components/hero"
 import { Container } from "@/components/ui"

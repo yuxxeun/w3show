@@ -17,8 +17,8 @@ const fontMono = localFont({
 
 export const metadata: Metadata = {
 	title: {
-		template: "%s / w3show",
-		default: "w3show",
+		template: "%s — W3Show",
+		default: "W3Show",
 	},
 	description: "Portfolio of collection of web development.",
 }

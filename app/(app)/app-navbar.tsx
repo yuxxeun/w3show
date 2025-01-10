@@ -41,7 +41,7 @@ export function AppNavbar({ children, ...props }: React.ComponentProps<typeof Na
 					</Navbar.Item>
 					<Navbar.Item isCurrent={pathname === "/guide"} href="/guide">
 						<IconApple className="inline size-4 md:hidden" />
-						Guide
+						Contribution Guide
 					</Navbar.Item>
 					<Navbar.Item isCurrent={pathname === "/contributors"} href="/contributors">
 						<IconTelephone className="inline size-4 md:hidden" />
