@@ -15,7 +15,7 @@ export interface MdxData {
 	site: string
 	github: string
 	image: string
-    category: string[]
+	category: string[]
 }
 
 export default async function Page() {

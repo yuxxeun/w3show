@@ -1,15 +1,18 @@
 import { Header } from "@/components/header"
 
 import { Resources } from "./resources"
+import { Hero } from "@/components/hero"
+import { Container } from "@/components/ui"
 
 export default function Home() {
 	return (
 		<div className="py-6">
-			<Header
-				title="w3show"
-				description="Repository of portfolio Inspiration: A curation of awesome portfolio website ideas for developers and designers to draw inspiration from."
-			/>
-			<Resources />
+			<div className="space-y-12 my-6">
+				<Hero />
+				<Container>
+					<Resources />
+				</Container>
+			</div>
 		</div>
 	)
 }

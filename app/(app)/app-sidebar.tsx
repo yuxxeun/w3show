@@ -1,6 +1,18 @@
 "use client"
 
-import { IconChainLink, IconCompass, IconDashboard, IconGallery, IconPackage, IconPerson } from "justd-icons"
+import {
+	IconBrandLayers,
+	IconChainLink,
+	IconColorSwatch,
+	IconCompass,
+	IconDashboard,
+	IconGallery,
+	IconHeart,
+	IconMap,
+	IconPackage,
+	IconPeople,
+	IconPerson,
+} from "justd-icons"
 import { usePathname } from "next/navigation"
 import {
 	Link,
@@ -22,7 +34,7 @@ export default function AppSidebar(props: React.ComponentProps<typeof Sidebar>) 
 					className="flex items-center gap-x-2 group-data-[collapsible=dock]:size-10 group-data-[collapsible=dock]:justify-center"
 					href="/"
 				>
-					<IconChainLink className="size-5" />
+					<IconBrandLayers className="size-5" />
 					<SidebarLabel className="font-medium">W3Show</SidebarLabel>
 				</Link>
 			</SidebarHeader>
@@ -43,8 +55,9 @@ export default function AppSidebar(props: React.ComponentProps<typeof Sidebar>) 
 
 const navigation = [
 	{ label: "Home", icon: <IconDashboard />, isCurrent: true, href: "/" },
-	{ label: "Portfolio", icon: <IconGallery />, isCurrent: false, href: "/portfolio" },
-	{ label: "Guide", icon: <IconCompass />, isCurrent: false, href: "/guide" },
-	{ label: "Contributors", icon: <IconPerson />, isCurrent: false, href: "/contributors" },
+	{ label: "Portfolio", icon: <IconColorSwatch />, isCurrent: false, href: "/portfolio" },
+	{ label: "Contribution Guide", icon: <IconMap />, isCurrent: false, href: "/guide" },
+	{ label: "Contributors", icon: <IconPeople />, isCurrent: false, href: "/contributors" },
+	{ label: "Support", icon: <IconHeart />, isCurrent: false, href: "/support" },
 	{ label: "Resources", icon: <IconPackage />, isCurrent: false, href: "/resources" },
 ]

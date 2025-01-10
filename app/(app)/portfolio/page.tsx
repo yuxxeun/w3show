@@ -2,6 +2,7 @@ import { Header } from "@/components/header"
 import type { Metadata } from "next"
 import Resources from "./resources"
 import { getAllPortfolioMdxFiles } from "@/utils/portfolio"
+import { Container } from "@/components/ui"
 
 export const metadata: Metadata = {
 	title: "Portfolio",
@@ -24,9 +25,11 @@ export default async function Page() {
 		<div className="py-6">
 			<Header
 				title="Portfolio"
-				description="Have any questions or need assistance? Feel free to reach out to us anytime. We’re here to help you with anything you need."
+				description="Discover an inspiring collection of exceptional web projects from the best developers and designers."
 			/>
-			<Resources allMdxData={allMdxData} />
+			<Container>
+				<Resources allMdxData={allMdxData} />
+			</Container>
 		</div>
 	)
 }

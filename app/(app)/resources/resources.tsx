@@ -1,7 +1,7 @@
 "use client"
 
 import { Badge, buttonStyles, Card, Container, Link, Tooltip } from "@/components/ui"
-import { IconBrandGithub, IconBrandX, IconChainLink } from "justd-icons"
+import { IconBrandGithub, IconBrandX, IconChainLink, IconWindowVisit } from "justd-icons"
 import Image from "next/image"
 import { MdxData } from "./page"
 
@@ -15,7 +15,6 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 			<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 				{allMdxData.map((frontmatter) => (
 					<div className="relative" key={frontmatter.title}>
-						{/* Make the card clickable, wrapping the Card component in a Link */}
 						<Link target="_blank" href={frontmatter.site}>
 							<Card className="inset-ring inset-ring-fg/10 inset-shadow-fg/10 inset-shadow-xs border-0 bg-bg dark:inset-ring-fg/5 dark:bg-secondary/30">
 								<div className="p-2">
@@ -50,7 +49,7 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 													>
 														<IconBrandX />
 													</Tooltip.Trigger>
-													<Tooltip.Content>Follow @{frontmatter.twitter} on X</Tooltip.Content>
+													<Tooltip.Content>Follow on X</Tooltip.Content>
 												</Tooltip>
 											</Link>
 										)}
@@ -66,7 +65,7 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 													>
 														<IconBrandGithub />
 													</Tooltip.Trigger>
-													<Tooltip.Content>View GitHub profile</Tooltip.Content>
+													<Tooltip.Content>Repository</Tooltip.Content>
 												</Tooltip>
 											</Link>
 										)}
@@ -88,9 +87,9 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 															size: "square-petite",
 														})}
 													>
-														<IconChainLink />
+														<IconWindowVisit />
 													</Tooltip.Trigger>
-													<Tooltip.Content>View Website</Tooltip.Content>
+													<Tooltip.Content>View website</Tooltip.Content>
 												</Tooltip>
 											</Link>
 										)}
@@ -99,7 +98,6 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 									<Card.Description>{frontmatter.description}</Card.Description>
 								</Card.Header>
 								<Card.Footer className="flex flex-wrap gap-1">
-									{/* Display categories as badges */}
 									{frontmatter.category &&
 										frontmatter.category.length > 0 &&
 										frontmatter.category.map((category, index) => (

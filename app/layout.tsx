@@ -2,7 +2,7 @@ import { Providers } from "@/components/providers"
 import type { Metadata } from "next"
 import localFont from "next/font/local"
 import { Toast } from "ui"
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from "@vercel/analytics/next"
 
 import "./globals.css"
 
@@ -34,7 +34,7 @@ export default function RootLayout({
 				<Toast />
 				<Providers>
 					{children}
-					<Analytics/>
+					<Analytics />
 				</Providers>
 			</body>
 		</html>

@@ -9,6 +9,7 @@ import {
 	IconChainLink,
 	IconColorPalette,
 	IconComputer,
+	IconWindowVisit,
 } from "justd-icons"
 import Image from "next/image"
 import { buttonStyles, Card, Link, Tooltip } from "ui"
@@ -108,7 +109,7 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 												>
 													<IconBrandGithub />
 												</Tooltip.Trigger>
-												<Tooltip.Content>View github profile</Tooltip.Content>
+												<Tooltip.Content>Github profile</Tooltip.Content>
 											</Tooltip>
 										</Link>
 									)}
@@ -130,7 +131,7 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 														size: "square-petite",
 													})}
 												>
-													<IconChainLink />
+													<IconWindowVisit />
 												</Tooltip.Trigger>
 												<Tooltip.Content>View website</Tooltip.Content>
 											</Tooltip>
