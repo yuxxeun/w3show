@@ -66,7 +66,6 @@ export default function AppSidebarNav() {
 				<Breadcrumbs className="@md:flex hidden">
 					{pathSegments.map((segment, index) => (
 						<Breadcrumbs.Item key={index} href={`/${pathSegments.slice(0, index + 1).join("/")}`}>
-							{/* {segment.charAt(0).toUpperCase() + segment.slice(1)} /  */}
 							{currentTime}
 						</Breadcrumbs.Item>
 					))}
@@ -82,9 +81,7 @@ export default function AppSidebarNav() {
 						className="h-9"
 					>
 						<IconSearch />
-
 						<span className="text-muted-fg">Search...</span>
-
 						<Menu.Keyboard className="-mr-2" keys="⌘K" />
 					</Button>
 					<CommandMenu isOpen={isOpen} onOpenChange={setIsOpen}>
@@ -93,7 +90,7 @@ export default function AppSidebarNav() {
 							<CommandMenu.Section heading="Pages">
 								{pages.map((page) => (
 									<>
-										<CommandMenu.Item key={page.id} className="mt-1">
+										<CommandMenu.Item key={page.href} className="mt-1">
 											<Link
 												onPress={() => setIsOpen(false)}
 												href={page.href}
@@ -114,6 +111,7 @@ export default function AppSidebarNav() {
 							</div>
 						</CommandEmpty>
 					</CommandMenu>
+					<ThemeSwitcher/>
 					<Link
 						aria-label="Github Repository"
 						className={buttonStyles({
