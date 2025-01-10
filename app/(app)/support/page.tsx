@@ -4,7 +4,7 @@ import type { Metadata } from "next"
 import Welcome from "@/components/section/support/content.mdx"
 import { Badge, DescriptionList, Heading, Link } from "@/components/ui"
 import { siteConfig } from "@/resources/config/site"
-import { IconHeart, IconHotDrinkCup, IconStar, IconStarLines } from "justd-icons"
+import { IconHeart, IconHotDrinkCup, IconStar } from "justd-icons"
 
 export const metadata: Metadata = {
 	title: "Support",
@@ -28,7 +28,9 @@ export default function Page() {
 						</DescriptionList.Term>
 						<DescriptionList.Details>
 							<Link href="#" target="_blank">
-								<Badge className="hover:text-black dark:hover:text-white">{siteConfig.repo}</Badge>
+								<Badge intent="success" className="hover:text-black dark:hover:text-white">
+									{siteConfig.repo}
+								</Badge>
 							</Link>
 						</DescriptionList.Details>
 						<DescriptionList.Term className="flex items-center gap-2">
@@ -37,7 +39,7 @@ export default function Page() {
 						</DescriptionList.Term>
 						<DescriptionList.Details>
 							<Link href={siteConfig.supportedPlatform.bmac} target="_blank">
-								<Badge className="hover:text-black dark:hover:text-white">
+								<Badge intent="success" className="hover:text-black dark:hover:text-white">
 									{siteConfig.supportedPlatform.gh_sponsor}
 								</Badge>
 							</Link>
@@ -48,14 +50,14 @@ export default function Page() {
 						</DescriptionList.Term>
 						<DescriptionList.Details>
 							<Link href={siteConfig.supportedPlatform.bmac} target="_blank">
-								<Badge className="hover:text-black dark:hover:text-white">
+								<Badge intent="success" className="hover:text-black dark:hover:text-white">
 									{siteConfig.supportedPlatform.bmac}
 								</Badge>
 							</Link>
 						</DescriptionList.Details>
 					</DescriptionList>
 				</div>
-				{/* <Welcome /> */}
+				<Welcome />
 			</Container>
 		</div>
 	)

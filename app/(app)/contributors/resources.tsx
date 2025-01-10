@@ -76,65 +76,45 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 								<div className="flex gap-1 mb-4">
 									{frontmatter.twitter && (
 										<Link
-											href={
-												frontmatter.twitter.startsWith("https://twitter.com/")
-													? frontmatter.twitter
-													: `https://twitter.com/${frontmatter.twitter}`
-											}
+											aria-label="Github Repository"
+											className={buttonStyles({
+												appearance: "outline",
+												size: "square-petite",
+												className: "**:data-[slot=icon]:text-fg",
+											})}
 											target="_blank"
+											href={`https://x.com/${frontmatter.twitter}`}
 										>
-											<Tooltip delay={0}>
-												<Tooltip.Trigger
-													aria-label="Follow me"
-													className={buttonStyles({
-														appearance: "outline",
-														size: "square-petite",
-													})}
-												>
-													<IconBrandX />
-												</Tooltip.Trigger>
-												<Tooltip.Content>Follow @{frontmatter.twitter} on X</Tooltip.Content>
-											</Tooltip>
+											<IconBrandX />
 										</Link>
 									)}
 									{frontmatter.github && (
-										<Link href={frontmatter.github} target="_blank">
-											<Tooltip delay={0}>
-												<Tooltip.Trigger
-													aria-label="View github profile"
-													className={buttonStyles({
-														appearance: "outline",
-														size: "square-petite",
-													})}
-												>
-													<IconBrandGithub />
-												</Tooltip.Trigger>
-												<Tooltip.Content>Github profile</Tooltip.Content>
-											</Tooltip>
+										<Link
+											aria-label="Github Repository"
+											className={buttonStyles({
+												appearance: "outline",
+												size: "square-petite",
+												className: "**:data-[slot=icon]:text-fg",
+											})}
+											target="_blank"
+											href={frontmatter.github}
+										>
+											<IconBrandGithub />
 										</Link>
 									)}
 
 									{frontmatter.site && (
 										<Link
-											href={
-												frontmatter.site.startsWith("http")
-													? frontmatter.site
-													: `https://${frontmatter.site}`
-											}
+											aria-label="Github Repository"
+											className={buttonStyles({
+												appearance: "outline",
+												size: "square-petite",
+												className: "**:data-[slot=icon]:text-fg",
+											})}
 											target="_blank"
+											href={frontmatter.site}
 										>
-											<Tooltip delay={0}>
-												<Tooltip.Trigger
-													aria-label="View website"
-													className={buttonStyles({
-														appearance: "outline",
-														size: "square-petite",
-													})}
-												>
-													<IconWindowVisit />
-												</Tooltip.Trigger>
-												<Tooltip.Content>View website</Tooltip.Content>
-											</Tooltip>
+											<IconWindowVisit />
 										</Link>
 									)}
 								</div>

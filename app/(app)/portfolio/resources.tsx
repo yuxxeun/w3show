@@ -64,65 +64,45 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 							<div className="-mt-3 flex gap-1">
 								{frontmatter.twitter && (
 									<Link
-										href={
-											frontmatter.twitter.startsWith("https://twitter.com/")
-												? frontmatter.twitter
-												: `https://twitter.com/${frontmatter.twitter}`
-										}
+										aria-label="Github Repository"
+										className={buttonStyles({
+											appearance: "outline",
+											size: "square-petite",
+											className: "**:data-[slot=icon]:text-fg",
+										})}
 										target="_blank"
+										href={`https://x.com/${frontmatter.twitter}`}
 									>
-										<Tooltip delay={0}>
-											<Tooltip.Trigger
-												aria-label="Follow me"
-												className={buttonStyles({
-													appearance: "outline",
-													size: "square-petite",
-												})}
-											>
-												<IconBrandX />
-											</Tooltip.Trigger>
-											<Tooltip.Content>Follow creator on X</Tooltip.Content>
-										</Tooltip>
+										<IconBrandX />
 									</Link>
 								)}
 								{frontmatter.repo && (
-									<Link href={frontmatter.repo} target="_blank">
-										<Tooltip delay={0}>
-											<Tooltip.Trigger
-												aria-label="View github profile"
-												className={buttonStyles({
-													appearance: "outline",
-													size: "square-petite",
-												})}
-											>
-												<IconBrandGithub />
-											</Tooltip.Trigger>
-											<Tooltip.Content>Repository</Tooltip.Content>
-										</Tooltip>
+									<Link
+										aria-label="Github Repository"
+										className={buttonStyles({
+											appearance: "outline",
+											size: "square-petite",
+											className: "**:data-[slot=icon]:text-fg",
+										})}
+										target="_blank"
+										href={frontmatter.repo}
+									>
+										<IconBrandGithub />
 									</Link>
 								)}
 
 								{frontmatter.site && (
 									<Link
-										href={
-											frontmatter.site.startsWith("http")
-												? frontmatter.site
-												: `https://${frontmatter.site}`
-										}
+										aria-label="Github Repository"
+										className={buttonStyles({
+											appearance: "outline",
+											size: "square-petite",
+											className: "**:data-[slot=icon]:text-fg",
+										})}
 										target="_blank"
+										href={frontmatter.site}
 									>
-										<Tooltip delay={0}>
-											<Tooltip.Trigger
-												aria-label="Follow me"
-												className={buttonStyles({
-													appearance: "outline",
-													size: "square-petite",
-												})}
-											>
-												<IconWindowVisit />
-											</Tooltip.Trigger>
-											<Tooltip.Content>View website</Tooltip.Content>
-										</Tooltip>
+										<IconWindowVisit />
 									</Link>
 								)}
 							</div>
