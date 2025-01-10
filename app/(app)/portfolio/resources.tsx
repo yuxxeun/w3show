@@ -33,7 +33,7 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 					<Link target="_blank" href={frontmatter.repo} aria-label={frontmatter.site} />
 					<Card className="inset-ring inset-ring-fg/10 inset-shadow-fg/10 inset-shadow-xs border bg-bg dark:inset-ring-fg/5 dark:bg-secondary/30">
 						<div className="p-2">
-							<div className="relative w-full aspect-[16/9] rounded-xl shadow-lg overflow-hidden">
+							<div className="relative w-full aspect-[16/9] h-fit rounded-xl shadow-lg overflow-hidden">
 								<Image
 									src={frontmatter.image || "https://github.com/basecamp.png"}
 									alt="banner"

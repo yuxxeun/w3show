@@ -73,7 +73,7 @@ export function Hero() {
 						<Link
 							className={buttonStyles({
 								size: "large",
-								intent: "secondary",
+                                appearance: "outline"
 							})}
 							href="/guide"
 						>
