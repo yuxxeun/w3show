@@ -65,20 +65,20 @@ export function Hero() {
 							className={buttonStyles({
 								size: "large",
 							})}
-							href="/docs/2.x/getting-started/installation"
+							href="/portfolio"
 						>
 							<IconCube />
-							Discover portfolio
+							Discover
 						</Link>
 						<Link
 							className={buttonStyles({
 								size: "large",
 								intent: "secondary",
 							})}
-							href="/docs/2.x/components/buttons/button"
+							href="/guide"
 						>
 							<IconPaper />
-							Read contribution guide
+							Read guide
 						</Link>
 					</div>
 				</Container>
