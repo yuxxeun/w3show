@@ -1,6 +1,6 @@
 "use client"
 
-import { Badge, buttonStyles, Card, Container, Link, Tooltip } from "@/components/ui"
+import { Badge, buttonStyles, Card, Container, Link, Separator, Tooltip } from "@/components/ui"
 import { IconBrandGithub, IconBrandX, IconChainLink, IconWindowVisit } from "justd-icons"
 import Image from "next/image"
 import { MdxData } from "./page"
@@ -14,7 +14,7 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 		<Container>
 			<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 				{allMdxData.map((frontmatter) => (
-					<div className="relative" key={frontmatter.title}>
+					<div className="relative border rounded-lg p-1.5 bg-bg dark:bg-secondary/30 backdrop-blur-3xl" key={frontmatter.title}>
 						<Link target="_blank" href={frontmatter.site}>
 							<Card className="inset-ring inset-ring-fg/10 inset-shadow-fg/10 inset-shadow-xs border-0 bg-bg dark:inset-ring-fg/5 dark:bg-secondary/30">
 								<div className="p-2">
@@ -28,10 +28,15 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 										/>
 									</div>
 								</div>
+								<Separator className="mt-5"/>
 								<Card.Header>
 									<div className="flex gap-1 mb-4">
 										{frontmatter.twitter && (
 											<Link
+												className={buttonStyles({
+													appearance: "outline",
+													size: "square-petite",
+												})}
 												href={
 													frontmatter.twitter.startsWith("https://twitter.com/")
 														? frontmatter.twitter
@@ -39,34 +44,19 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 												}
 												target="_blank"
 											>
-												<Tooltip delay={0}>
-													<Tooltip.Trigger
-														aria-label="Follow me"
-														className={buttonStyles({
-															appearance: "outline",
-															size: "square-petite",
-														})}
-													>
+												
 														<IconBrandX />
-													</Tooltip.Trigger>
-													<Tooltip.Content>Follow on X</Tooltip.Content>
-												</Tooltip>
+													
 											</Link>
 										)}
 										{frontmatter.github && (
-											<Link href={frontmatter.github} target="_blank">
-												<Tooltip delay={0}>
-													<Tooltip.Trigger
-														aria-label="View github profile"
-														className={buttonStyles({
-															appearance: "outline",
-															size: "square-petite",
-														})}
-													>
+											<Link href={frontmatter.github} target="_blank" className={buttonStyles({
+												appearance: "outline",
+												size: "square-petite",
+											})}>
+												
 														<IconBrandGithub />
-													</Tooltip.Trigger>
-													<Tooltip.Content>Repository</Tooltip.Content>
-												</Tooltip>
+													
 											</Link>
 										)}
 
@@ -78,30 +68,26 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 														: `https://${frontmatter.site}`
 												}
 												target="_blank"
+												className={buttonStyles({
+													appearance: "outline",
+													size: "square-petite",
+												})}
 											>
-												<Tooltip delay={0}>
-													<Tooltip.Trigger
-														aria-label="View website"
-														className={buttonStyles({
-															appearance: "outline",
-															size: "square-petite",
-														})}
-													>
+												
 														<IconWindowVisit />
-													</Tooltip.Trigger>
-													<Tooltip.Content>View website</Tooltip.Content>
-												</Tooltip>
+													
 											</Link>
 										)}
 									</div>
 									<Card.Title>{frontmatter.title}</Card.Title>
 									<Card.Description>{frontmatter.description}</Card.Description>
 								</Card.Header>
+								<Separator className="mb-5"/>
 								<Card.Footer className="flex flex-wrap gap-1">
 									{frontmatter.category &&
 										frontmatter.category.length > 0 &&
 										frontmatter.category.map((category, index) => (
-											<Badge key={index} shape="circle">
+											<Badge key={index} shape="square">
 												{category}
 											</Badge>
 										))}

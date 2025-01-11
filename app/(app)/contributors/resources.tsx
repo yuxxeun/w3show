@@ -39,7 +39,7 @@ const mapRoleToText = (role: string) => {
 		case "📖":
 			return "Documentation"
 		case "💻":
-			return "Developer"
+			return "Code"
 		case "🎨":
 			return "Styling"
 		case "🐛":
@@ -58,15 +58,18 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 		<Container>
 			<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 				{allMdxData.map((frontmatter) => (
-					<div className="relative" key={frontmatter.fileName}>
+					<div className="relative border rounded-lg p-1.5 bg-bg dark:bg-secondary/30 backdrop-blur-3xl" key={frontmatter.fileName}>
 						<Link target="_blank" href={frontmatter.github} aria-label={frontmatter.site} />
 						<Card className="inset-ring inset-ring-fg/10 inset-shadow-fg/10 inset-shadow-xs border-0 bg-bg dark:inset-ring-fg/5 dark:bg-secondary/30">
 							<div className="p-2">
-								<div className="relative w-full aspect-[16/9] rounded-xl shadow-lg overflow-hidden">
+								<div className="relative w-full rounded-xl shadow-lg overflow-hidden">
 									<Image
-										src={frontmatter.image || "https://github.com/basecamp.png"}
+										src={
+											frontmatter.image ||
+											"https://static.vecteezy.com/system/resources/previews/006/736/566/large_2x/illustration-file-not-found-or-404-error-page-free-vector.jpg"
+										}
 										alt="banner"
-										className="object-cover object-top"
+										className="object-top object-cover rounded-lg aspect-[16/9]"
 										height={786}
 										width={1200}
 									/>

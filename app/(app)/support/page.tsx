@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
 	return (
-		<div className="py-6">
+		<div className="py-6 mb-8">
 			<Header
 				title="Support Guidelines"
 				description="This documentation contains a set of guidelines to help you during the contribution process of this project."

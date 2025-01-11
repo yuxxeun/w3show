@@ -74,7 +74,7 @@ export default function AppSidebarNav() {
 
 			<div className="ml-auto flex items-center gap-x-1">
 				<>
-					<Button
+					{/* <Button
 						onPress={() => setIsOpen((open: boolean) => !open)}
 						size="small"
 						appearance="outline"
@@ -89,18 +89,18 @@ export default function AppSidebarNav() {
 						<CommandMenu.List>
 							<CommandMenu.Section heading="Pages">
 								{pages.map((page) => (
-									<>
-										<CommandMenu.Item key={page.href} className="mt-1">
-											<Link
-												onPress={() => setIsOpen(false)}
-												href={page.href}
-												className="w-full flex items-center"
-											>
-												<page.icon /> {page.name}
-											</Link>
-										</CommandMenu.Item>
-										<CommandSeparator />
-									</>
+								<React.Fragment key={page.href}>
+									<CommandMenu.Item className="mt-1">
+									<Link
+										onPress={() => setIsOpen(false)}
+										href={page.href}
+										className="w-full flex items-center"
+									>
+										<page.icon /> {page.name}
+									</Link>
+									</CommandMenu.Item>
+									<CommandSeparator />
+								</React.Fragment>
 								))}
 							</CommandMenu.Section>
 						</CommandMenu.List>
@@ -110,8 +110,8 @@ export default function AppSidebarNav() {
 								<p className="mt-2">No results found.</p>
 							</div>
 						</CommandEmpty>
-					</CommandMenu>
-					<ThemeSwitcher/>
+					</CommandMenu> */}
+					<ThemeSwitcher />
 					<Link
 						aria-label="Github Repository"
 						className={buttonStyles({

@@ -13,7 +13,6 @@ while true; do
   else
     echo "---" > "$FILE_NAME"
     echo "author: Your name here" >> "$FILE_NAME"
-    echo "site: https://your_site_here" >> "$FILE_NAME"
     echo "stack: [HTML, JavaScript, CSS, whatever]" >> "$FILE_NAME"
     echo "repo: https://github.com/your_github_profile/repo" >> "$FILE_NAME"
     echo "image: /contributors/your_image.jpg" >> "$FILE_NAME"

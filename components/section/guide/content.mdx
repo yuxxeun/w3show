@@ -1,29 +1,41 @@
-# Welcome to My MDX Page!
-This is heading one
+# Get started
+To get started with add your site, you can start with two way: 
 
-## About This Page
-This page demonstrates how to use **MDX** (Markdown with embedded JSX) to combine the power of Markdown for formatting with React components. MDX allows you to write content in Markdown syntax and also render interactive React components, making it ideal for dynamic documentation, blogs, and educational content.
+  - Manually
+  - Automatically
 
-### Key Features:
-- **Bold** text: Emphasize certain parts of your text with bold.
-- _Italic_ text: Use italics for subtle emphasis.
-- `Inline code`: Highlight a piece of code inline with the rest of the content.
-- [Links](https://example.com): Create links to external resources.
-- Code blocks: Include code snippets with syntax highlighting.
-- **React Components**: Embed React components directly into the page.
-- Blockquotes: Use blockquotes for highlighting important information or quotes.
+## Manually
+Create file with `.mdx` format inside `content/portfolio/` directory, with following front matter format:
 
-## Code Example
-Below is a sample **React** code written in JSX, displayed using a code block for clarity:
-
-```jsx
-import React from "react";
-
-// A simple functional component that takes a 'name' prop
-const Greeting = ({ name }) => {
-  return <h2>Hello, {name}!</h2>;
-};
-
-// Exporting the component so it can be used elsewhere
-export default Greeting;
+```mdx
+---
+author: Your Name
+twitter: your_twitter_account
+site: https://your_site
+stack: [Tech 1, Tech 2, Tech 3, Etc]
+repo: https://your_repository_url
+image: /portfolio/your_image.png
+---
 ```
+
+For image, you can put inside `public/portfolio/` directory with the size `16:9` for create best picture.
+
+## Automatically
+If you prefer a more automated process, you can use the script to quickly set things up!
+
+First, give the script executable permissions by running:
+
+```shell
+chmod +x portfolio.sh
+```
+
+Next, run the script:
+
+```shell
+./portfolio.sh
+```
+
+The script will guide you through an **interactive prompt** where you can easily fill in with your details.
+
+## Pull request
+After all done, you can open pull request W3Show repository.

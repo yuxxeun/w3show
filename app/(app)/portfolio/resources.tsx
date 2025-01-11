@@ -33,17 +33,20 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 					<Link target="_blank" href={frontmatter.repo} aria-label={frontmatter.site} />
 					<Card className="inset-ring inset-ring-fg/10 inset-shadow-fg/10 inset-shadow-xs border bg-bg dark:inset-ring-fg/5 dark:bg-secondary/30">
 						<div className="p-2">
-							<div className="relative w-full aspect-[16/9] h-fit rounded-xl shadow-lg overflow-hidden">
+							<div className="relative w-full rounded-xl shadow-lg overflow-hidden">
 								<Image
-									src={frontmatter.image || "https://github.com/basecamp.png"}
+									src={
+										frontmatter.image ||
+										"https://static.vecteezy.com/system/resources/previews/006/736/566/large_2x/illustration-file-not-found-or-404-error-page-free-vector.jpg"
+									}
 									alt="banner"
-									className="object-cover object-center rounded-lg"
+									className="object-cover object-center rounded-lg aspect-[16/9]"
 									height={786}
 									width={1200}
 								/>
 							</div>
 						</div>
-						<Separator />
+						<Separator className="mt-5" />
 						<Card.Header>
 							<div className="mt-1 w-fit space-y-2">
 								<div>

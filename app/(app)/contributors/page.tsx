@@ -12,7 +12,6 @@ export interface MdxData {
 	role: []
 	twitter: string
 	site: string
-	stack: string[]
 	github: string
 	image: string
 	fileName: string
@@ -22,7 +21,7 @@ export default async function Page() {
 	const allMdxData = await getAllContributorsMdxFiles()
 
 	return (
-		<div className="py-6">
+		<div className="py-6 mb-8">
 			<Header
 				title="Contributors"
 				description="Have any questions or need assistance? Feel free to reach out to us anytime. We’re here to help you with anything you need."

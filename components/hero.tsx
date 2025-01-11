@@ -1,5 +1,6 @@
 "use client"
 
+import { siteConfig } from "@/resources/config/site"
 import { IconBrandJustd, IconCube, IconPaper, IconStar } from "justd-icons"
 import { Header } from "react-aria-components"
 import { Container, Link, buttonStyles } from "ui"
@@ -42,21 +43,22 @@ export function Hero() {
 					<Header>
 						<Link
 							target="_blank"
-							href="#"
+							href={siteConfig.repo}
 							className="group inline-flex items-center gap-x-1 rounded-full bg-zinc-50 px-3 py-2 text-xs text-zinc-900 data-hovered:bg-zinc-200"
 						>
 							<IconStar className="text-amber-400 duration-200 group-hover:fill-amber-400 group-hover:text-amber-400" />
-							Stars sustain energy
+							Give {siteConfig.name} star
 						</Link>
 						<h1 className="mt-4 mb-4 max-w-3xl font-bold text-2xl tracking-tight lg:mb-6 lg:text-4xl">
-							Accessible React UI Components. Copy, Customize, and Make Them Yours.
+							Repository of portfolio Inspiration.
 						</h1>
 						<p className="block max-w-3xl text-base text-muted-fg leading-relaxed md:leading-relaxed lg:text-xl [&_strong]:font-medium">
-							<strong className="text-fg">Title</strong> is a chill set of React components, built on top
-							of <strong className="text-fg">React Aria Components</strong>, all about keeping the web
-							accessible. Easy to customize and just copy & paste into your React projects. Plus, it
-							includes <strong className="text-fg">Tailwind CSS</strong> for sleek styling right out of
-							the box.
+							<strong className="text-fg">
+								{siteConfig.name}
+							</strong>
+							{" "} is a {" "}
+							{siteConfig.description}
+							
 						</p>
 					</Header>
 
@@ -73,7 +75,7 @@ export function Hero() {
 						<Link
 							className={buttonStyles({
 								size: "large",
-                                appearance: "outline"
+								appearance: "outline",
 							})}
 							href="/guide"
 						>

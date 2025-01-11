@@ -22,7 +22,7 @@ export default async function Page() {
 	const allMdxData = await getAllResourcesMdxFiles()
 
 	return (
-		<div className="py-6">
+		<div className="py-6 mb-8">
 			<Header
 				title="Behind the Project"
 				description="This documentation contains a set of guidelines to help you during the contribution process of this project."

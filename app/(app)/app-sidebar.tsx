@@ -1,7 +1,6 @@
 "use client"
 
 import {
-	IconBrandLayers,
 	IconChainLink,
 	IconColorSwatch,
 	IconCompass,
@@ -9,9 +8,10 @@ import {
 	IconGallery,
 	IconHeart,
 	IconMap,
-	IconPackage,
+	IconMagic,
+	IconPackageFill,
 	IconPeople,
-	IconPerson,
+
 } from "justd-icons"
 import { usePathname } from "next/navigation"
 import {
@@ -34,7 +34,7 @@ export default function AppSidebar(props: React.ComponentProps<typeof Sidebar>) 
 					className="flex items-center gap-x-2 group-data-[collapsible=dock]:size-10 group-data-[collapsible=dock]:justify-center"
 					href="/"
 				>
-					<IconBrandLayers className="size-5" />
+					<IconPackageFill className="size-5" />
 					<SidebarLabel className="font-medium">W3Show</SidebarLabel>
 				</Link>
 			</SidebarHeader>
@@ -59,5 +59,5 @@ const navigation = [
 	{ label: "Contribution Guide", icon: <IconMap />, isCurrent: false, href: "/guide" },
 	{ label: "Contributors", icon: <IconPeople />, isCurrent: false, href: "/contributors" },
 	{ label: "Support", icon: <IconHeart />, isCurrent: false, href: "/support" },
-	{ label: "Resources", icon: <IconPackage />, isCurrent: false, href: "/resources" },
+	{ label: "Resources", icon: <IconMagic />, isCurrent: false, href: "/resources" },
 ]

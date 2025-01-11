@@ -12,6 +12,7 @@ import {
 	IconBrandParanoid,
 	IconChevronDown,
 	IconDashboard,
+	IconMagic,
 	IconPackage,
 	IconTelephone,
 } from "justd-icons"
@@ -27,7 +28,7 @@ export function AppNavbar({ children, ...props }: React.ComponentProps<typeof Na
 		<Navbar isSticky isOpen={isOpen} onOpenChange={setIsOpen} {...props}>
 			<Navbar.Nav>
 				<Navbar.Logo className="text-fg items-stretch" href="/">
-					<IconBrandLayers className="size-5" />
+					<IconPackage className="size-5" />
 					<span className="font-bold">w3show</span>
 				</Navbar.Logo>
 				<Navbar.Section>
@@ -49,7 +50,7 @@ export function AppNavbar({ children, ...props }: React.ComponentProps<typeof Na
 					</Navbar.Item>
 					<Menu>
 						<Navbar.Item className="group">
-							<IconPackage className="inline size-4 md:hidden" />
+							<IconMagic className="inline size-4 md:hidden" />
 							Resources
 							<IconChevronDown className="ml-2 size-4 duration-200 group-data-pressed:rotate-180" />
 						</Navbar.Item>

@@ -22,7 +22,7 @@ export default async function Page() {
 	const allMdxData = await getAllPortfolioMdxFiles()
 
 	return (
-		<div className="py-6">
+		<div className="py-6 mb-8">
 			<Header
 				title="Portfolio"
 				description="Discover an inspiring collection of exceptional web projects from the best developers and designers."

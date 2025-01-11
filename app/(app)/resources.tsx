@@ -37,7 +37,6 @@ export function Resources() {
 					<Card className="inset-ring inset-ring-fg/10 inset-shadow-fg/10 inset-shadow-xs border-0 bg-bg dark:inset-ring-fg/5 dark:bg-secondary/30">
 						<Card.Header>
 							<div className="mb-4">
-								<Link href={resource.link} target="_blank">
 									<Tooltip delay={0}>
 										<Tooltip.Trigger
 											aria-label={resource.tooltip}
@@ -48,9 +47,7 @@ export function Resources() {
 										>
 											{resource.icon}
 										</Tooltip.Trigger>
-										<Tooltip.Content>{resource.tooltip}</Tooltip.Content>
 									</Tooltip>
-								</Link>
 							</div>
 							<Card.Title>{resource.title}</Card.Title>
 							<Card.Description>{resource.description}</Card.Description>
