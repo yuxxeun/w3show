@@ -24,7 +24,7 @@ export default async function Page() {
 		<div className="py-6 mb-8">
 			<Header
 				title="Contributors"
-				description="Have any questions or need assistance? Feel free to reach out to us anytime. We’re here to help you with anything you need."
+				description="Shoutout to these wonderful people for contributing to this project."
 			/>
 			<Resources allMdxData={allMdxData} />
 		</div>

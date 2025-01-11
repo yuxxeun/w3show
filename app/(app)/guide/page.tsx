@@ -12,7 +12,7 @@ export default function Page() {
 		<div className="py-6 mb-8">
 			<Header
 				title="Contribution Guidelines"
-				description="This documentation contains a set of guidelines to help you during the contribution process of this project."
+				description="A set of guidelines to help you during the contribution process of this project."
 			/>
 			<Container>
 				<Welcome />

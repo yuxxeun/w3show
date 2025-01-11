@@ -25,7 +25,7 @@ export default function AppSidebarNav() {
 
 	const pathSegments = pathname.replace(/^\/+|\/+$/, "").split("/")
 
-	const [currentTime, setCurrentTime] = useState(dayjs().format("dddd, DD MMM YYYY h:mm:ss a"))
+	const [currentTime, setCurrentTime] = useState(dayjs().format("dddd, DD MMM YYYY hh:mm:ss"))
 
 	useEffect(() => {
 		const intervalId = setInterval(() => {
@@ -66,7 +66,7 @@ export default function AppSidebarNav() {
 				<Breadcrumbs className="@md:flex hidden">
 					{pathSegments.map((segment, index) => (
 						<Breadcrumbs.Item key={index} href={`/${pathSegments.slice(0, index + 1).join("/")}`}>
-							{currentTime}
+							{currentTime} {dayjs().format("a")}
 						</Breadcrumbs.Item>
 					))}
 				</Breadcrumbs>

@@ -12,8 +12,7 @@ export const siteConfig = {
 	repo: "https://github.com/yuxxeun/w3show",
 	license: "https://github.com/yuxxeun/w3show/blob/main/LICENSE",
 	supportedPlatform: {
-		gh_sponsor: "https://github.com/yuxxeun/sponsor",
-		bmac: "https://buymecoffe",
+		gh_sponsor: "https://github.com/sponsors/yuxxeun",
 	},
 }
 

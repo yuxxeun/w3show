@@ -11,7 +11,6 @@ import {
 	IconMagic,
 	IconPackageFill,
 	IconPeople,
-
 } from "justd-icons"
 import { usePathname } from "next/navigation"
 import {

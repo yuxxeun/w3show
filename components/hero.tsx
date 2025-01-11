@@ -47,18 +47,13 @@ export function Hero() {
 							className="group inline-flex items-center gap-x-1 rounded-full bg-zinc-50 px-3 py-2 text-xs text-zinc-900 data-hovered:bg-zinc-200"
 						>
 							<IconStar className="text-amber-400 duration-200 group-hover:fill-amber-400 group-hover:text-amber-400" />
-							Give {siteConfig.name} star
+							Stars sustain energy
 						</Link>
 						<h1 className="mt-4 mb-4 max-w-3xl font-bold text-2xl tracking-tight lg:mb-6 lg:text-4xl">
-							Repository of portfolio Inspiration.
+							The Ultimate Portfolio Hub for Developers and Designers.
 						</h1>
 						<p className="block max-w-3xl text-base text-muted-fg leading-relaxed md:leading-relaxed lg:text-xl [&_strong]:font-medium">
-							<strong className="text-fg">
-								{siteConfig.name}
-							</strong>
-							{" "} is a {" "}
-							{siteConfig.description}
-							
+							<strong className="text-fg">{siteConfig.name}</strong> is a {siteConfig.description}
 						</p>
 					</Header>
 

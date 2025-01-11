@@ -13,10 +13,7 @@ export const metadata: Metadata = {
 export default function Page() {
 	return (
 		<div className="py-6 mb-8">
-			<Header
-				title="Support Guidelines"
-				description="This documentation contains a set of guidelines to help you during the contribution process of this project."
-			/>
+			<Header title="Support Guidelines" description="The proper way to support the project." />
 			<Container>
 				<div>
 					<Heading className="sm:text-lg">Supported Platform</Heading>
@@ -38,20 +35,9 @@ export default function Page() {
 							Github Sponsor
 						</DescriptionList.Term>
 						<DescriptionList.Details>
-							<Link href={siteConfig.supportedPlatform.bmac} target="_blank">
+							<Link href={siteConfig.supportedPlatform.gh_sponsor} target="_blank">
 								<Badge intent="success" className="hover:text-black dark:hover:text-white">
 									{siteConfig.supportedPlatform.gh_sponsor}
-								</Badge>
-							</Link>
-						</DescriptionList.Details>
-						<DescriptionList.Term className="flex items-center gap-2">
-							<IconHotDrinkCup className="fill-accent-fg" />
-							Buy Me a Coffee
-						</DescriptionList.Term>
-						<DescriptionList.Details>
-							<Link href={siteConfig.supportedPlatform.bmac} target="_blank">
-								<Badge intent="success" className="hover:text-black dark:hover:text-white">
-									{siteConfig.supportedPlatform.bmac}
 								</Badge>
 							</Link>
 						</DescriptionList.Details>

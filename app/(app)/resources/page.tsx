@@ -24,8 +24,8 @@ export default async function Page() {
 	return (
 		<div className="py-6 mb-8">
 			<Header
-				title="Behind the Project"
-				description="This documentation contains a set of guidelines to help you during the contribution process of this project."
+				title="Resources behind the code"
+				description="A huge thanks to these powerful tools that make this project possible."
 			/>
 			<Container>
 				<Resources allMdxData={allMdxData} />

@@ -12,11 +12,13 @@ while true; do
     echo 
   else
     echo "---" > "$FILE_NAME"
-    echo "author: Your name here" >> "$FILE_NAME"
-    echo "site: https://your_site_here" >> "$FILE_NAME"
-    echo "stack: [HTML, JavaScript, CSS, whatever]" >> "$FILE_NAME"
-    echo "repo: https://github.com/your_github_profile/repo" >> "$FILE_NAME"
-    echo "image: /resources/your_image.jpg" >> "$FILE_NAME"
+    echo "title: \"Your Title Here\"" >> "$FILE_NAME"
+    echo "description: \"Your description here\"" >> "$FILE_NAME"
+    echo "twitter: \"your_twitter_handle\"" >> "$FILE_NAME"
+    echo "site: \"https://your_site_here\"" >> "$FILE_NAME"
+    echo "github: \"https://github.com/your_github_profile/repo\"" >> "$FILE_NAME"
+    echo "image: \"https://github.com/your_github_profile.png\"" >> "$FILE_NAME"
+    echo "category: [\"Your Category\"]" >> "$FILE_NAME"
     echo "---" >> "$FILE_NAME"
 
     echo -e "✨ \033[32mSuccessfully created a new resources file: take a look at $FILE_NAME\033[0m"

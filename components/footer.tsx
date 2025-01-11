@@ -8,8 +8,7 @@ import dayjs from "dayjs"
 const navigation = {
 	supports: [
 		{ name: "Github Star", href: "https://github.com/yuxxeun/w3show" },
-		{ name: "Github Sponsor", href: "https://github.com/yuxxeun/sponsor" },
-		{ name: "Buy Me a Coffee", href: "https://buymeacoffe.com/" },
+		{ name: "Github Sponsor", href: "https://github.com/sponsors/yuxxeun" },
 	],
 	resources: [
 		{ name: "Icons", href: "https://getjustd.com/icons" },
@@ -35,9 +34,9 @@ export function Footer() {
 					<div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
 						<div className="md:grid md:grid-cols-2 md:gap-8">
 							<div>
-								<h3 className="font-semibold text-fg text-sm leading-6">Support</h3>
+								<h3 className="font-semibold text-fg text-sm leading-6">Resources</h3>
 								<ul className="mt-6 space-y-4">
-									{navigation.supports.map((item) => (
+									{navigation.resources.map((item) => (
 										<li key={item.name}>
 											<Link
 												href={item.href}
@@ -50,9 +49,9 @@ export function Footer() {
 								</ul>
 							</div>
 							<div className="mt-10 md:mt-0">
-								<h3 className="font-semibold text-fg text-sm leading-6">Resources</h3>
+								<h3 className="font-semibold text-fg text-sm leading-6">Support</h3>
 								<ul className="mt-6 space-y-4">
-									{navigation.resources.map((item) => (
+									{navigation.supports.map((item) => (
 										<li key={item.name}>
 											<Link
 												target="_blank"

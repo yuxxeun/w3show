@@ -37,17 +37,17 @@ export function Resources() {
 					<Card className="inset-ring inset-ring-fg/10 inset-shadow-fg/10 inset-shadow-xs border-0 bg-bg dark:inset-ring-fg/5 dark:bg-secondary/30">
 						<Card.Header>
 							<div className="mb-4">
-									<Tooltip delay={0}>
-										<Tooltip.Trigger
-											aria-label={resource.tooltip}
-											className={buttonStyles({
-												appearance: "outline",
-												size: "square-petite",
-											})}
-										>
-											{resource.icon}
-										</Tooltip.Trigger>
-									</Tooltip>
+								<Tooltip delay={0}>
+									<Tooltip.Trigger
+										aria-label={resource.tooltip}
+										className={buttonStyles({
+											appearance: "outline",
+											size: "square-petite",
+										})}
+									>
+										{resource.icon}
+									</Tooltip.Trigger>
+								</Tooltip>
 							</div>
 							<Card.Title>{resource.title}</Card.Title>
 							<Card.Description>{resource.description}</Card.Description>
