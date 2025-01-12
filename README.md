@@ -1,30 +1,25 @@
 # w3show
-A collection of great portfolio ideas for developers and designers to get inspired when creating their own.
 
-## Submit your site
+!["Banner"](/public//banner.png)
+
+> The Ultimate Portfolio Hub for Developers and Designers: A curation of awesome portfolio website ideas for developers and designers to draw inspiration from.
+
+## Get started
 
 After cloning the project, you should install dependencies on the project directory:
 ```shell
 bun install
 ```
-Interesting to submit your site?
-Simply add new `mdx` file into `content/portfolio` directory with `frontmatter` like example below: 
-
-```md
-author: Your name here
-site: your-site.com
-stack: ["HTML", "CSS", "JavaScript"]
-repo: your-github-repo-url
-image: /portfolio/image.jpg
-```
-
-But you can make it **automatically** with run bash script `portfolio.sh` to generate new mdx file.
-
+Running development server
 ```shell
-1 chmod +x portfolio.sh
-2 ./portfolio.sh
+bun dev
 ```
+Build production preview
+```bash
+bun run build
+```
+## Submit your site
+Read how to submit your portfolio on [contribution guide](./components//section//guide//content.mdx).
 
-### Suggestion
-
-Do you know a portfolio you'd like to see added but can't submit yourself? Mention it in this [issue](https://github.com/yuxxeun/w3show/issues), and the community will take care of it. You can also open a PR to add any suggested portfolios.
+## License
+[MIT](./LICENSE)
