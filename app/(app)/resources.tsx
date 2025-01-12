@@ -1,60 +1,58 @@
 "use client"
 
-import { Container } from "@/components/container"
-import { IconBrandGithub, IconBrandX, IconChainLink, IconHeart } from "justd-icons"
-import Image from "next/image"
-import { buttonStyles, Card, Link, Tooltip, Badge } from "ui"
+import { IconBrandReactjs, IconCodeLines, IconHeart, IconPictureInPicture } from "justd-icons"
+import { buttonStyles, Card, Heading, Tooltip } from "ui"
 
 const resourceData = [
 	{
 		title: "The Best Resource",
-		description: "Over 130+ inspiration in a single repository",
+		description: "Bunch inspiration in a single repository.",
 		icon: <IconHeart />,
-		link: "https://github.com/basecamp",
-		tooltip: "View GitHub profile",
 	},
 	{
-		title: "GitHub Repository",
-		description: "Explore amazing open-source projects",
-		icon: <IconBrandGithub />,
-		link: "https://github.com",
-		tooltip: "View GitHub profile",
+		title: "Technologies Used",
+		description: "Discover the technologies used.",
+		icon: <IconBrandReactjs />,
 	},
 	{
-		title: "Design Inspiration",
-		description: "Get creative design ideas for your next project",
-		icon: <IconBrandX />,
-		link: "https://www.behance.net",
-		tooltip: "Visit Behance",
+		title: "Portfolio Screenshot",
+		description: "See portfolio looks like without visiting.",
+		icon: <IconPictureInPicture />,
+	},
+	{
+		title: "Source Code",
+		description: "Portfolio source code available.",
+		icon: <IconCodeLines />,
 	},
 ]
 
 export function Resources() {
 	return (
-		<div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-			{resourceData.map((resource, index) => (
-				<div className="relative" key={index}>
-					<Card className="inset-ring inset-ring-fg/10 inset-shadow-fg/10 inset-shadow-xs border-0 bg-bg dark:inset-ring-fg/5 dark:bg-secondary/30">
-						<Card.Header>
-							<div className="mb-4">
-								<Tooltip delay={0}>
-									<Tooltip.Trigger
-										aria-label={resource.tooltip}
-										className={buttonStyles({
-											appearance: "outline",
-											size: "square-petite",
-										})}
-									>
-										{resource.icon}
-									</Tooltip.Trigger>
-								</Tooltip>
-							</div>
-							<Card.Title>{resource.title}</Card.Title>
-							<Card.Description>{resource.description}</Card.Description>
-						</Card.Header>
-					</Card>
-				</div>
-			))}
-		</div>
+		<>
+			<div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+				{resourceData.map((resource, index) => (
+					<div className="relative" key={index}>
+						<Card className="inset-ring inset-ring-fg/10 inset-shadow-fg/10 inset-shadow-xs border-0 bg-bg dark:inset-ring-fg/5 dark:bg-secondary/30">
+							<Card.Header>
+								<div className="mb-4">
+									<Tooltip>
+										<Tooltip.Trigger
+											className={buttonStyles({
+												appearance: "outline",
+												size: "square-petite",
+											})}
+										>
+											{resource.icon}
+										</Tooltip.Trigger>
+									</Tooltip>
+								</div>
+								<Card.Title>{resource.title}</Card.Title>
+								<Card.Description>{resource.description}</Card.Description>
+							</Card.Header>
+						</Card>
+					</div>
+				))}
+			</div>
+		</>
 	)
 }

@@ -115,8 +115,7 @@ export function Footer() {
 					<strong>
 						{siteConfig.name} &copy; {dayjs().format("YYYY")}
 					</strong>{" "}
-					- This project’s crafted with 💙 by <Link href={siteConfig.links.twitter}>{siteConfig.author}</Link>
-					. Peep the Source Code on <Link href={siteConfig.repo}>GitHub</Link>.
+					- Crafted with 💙 by <Link href={siteConfig.links.twitter}>{siteConfig.author}</Link>.
 				</p>
 
 				<p>
@@ -124,24 +123,28 @@ export function Footer() {
 					<Link href="https://nextjs.org" target="_blank">
 						Next.js
 					</Link>
-					,
+					,{" "}
 					<Link href="https://tailwindcss.com" target="_blank">
 						Tailwind CSS
 					</Link>
-					, and{" "}
-					<Link href="https://react-spectrum.adobe.com/react-aria/components.html" target="_blank">
-						RAC
+					,{" "}
+					<Link href="https://getjustd.com" target="_blank">
+						JustD
+					</Link>{" "}
+					&{" "}
+					<Link href="https://vercel.com" target="_blank">
+						Vercel
 					</Link>
 					.
 				</p>
-				<p>
+				{/* <p>
 					Hosted on{" "}
 					<Link href="https://vercel.com" target="_blank">
 						Vercel
 					</Link>
 					. The source code's got the{" "}
 					<Link href="https://github.com/justdlabs/justd/blob/main/LICENSE">MIT</Link> license.
-				</p>
+				</p> */}
 			</Container>
 		</footer>
 	)

@@ -60,22 +60,22 @@ export function Hero() {
 					<div className="mt-6 flex items-center gap-x-2">
 						<Link
 							className={buttonStyles({
-								size: "large",
+								size: "medium",
 							})}
 							href="/portfolio"
 						>
 							<IconCube />
-							Discover
+							Explore Portfolio
 						</Link>
 						<Link
 							className={buttonStyles({
-								size: "large",
+								size: "medium",
 								appearance: "outline",
 							})}
 							href="/guide"
 						>
 							<IconPaper />
-							Read guide
+							Read Guide
 						</Link>
 					</div>
 				</Container>

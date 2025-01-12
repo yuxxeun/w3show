@@ -1,3 +1,5 @@
+"use client"
+
 import { Footer } from "@/components/footer"
 import { SidebarInset, SidebarProvider } from "@/components/ui"
 import AppSidebar from "./app-sidebar"

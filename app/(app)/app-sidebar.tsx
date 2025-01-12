@@ -1,22 +1,24 @@
 "use client"
 
 import {
-	IconChainLink,
 	IconColorSwatch,
-	IconCompass,
 	IconDashboard,
-	IconGallery,
 	IconHeart,
 	IconMap,
 	IconMagic,
 	IconPackageFill,
 	IconPeople,
+	IconBrandVercel,
+	IconBrandCopilot,
 } from "justd-icons"
 import { usePathname } from "next/navigation"
 import {
+	Badge,
 	Link,
+	Separator,
 	Sidebar,
 	SidebarContent,
+	SidebarFooter,
 	SidebarHeader,
 	SidebarItem,
 	SidebarLabel,
@@ -37,6 +39,7 @@ export default function AppSidebar(props: React.ComponentProps<typeof Sidebar>) 
 					<SidebarLabel className="font-medium">W3Show</SidebarLabel>
 				</Link>
 			</SidebarHeader>
+			<Separator className="-mt-3.5 mb-3.5" />
 			<SidebarContent>
 				<SidebarSection>
 					{navigation.map((item, index) => (
@@ -47,6 +50,19 @@ export default function AppSidebar(props: React.ComponentProps<typeof Sidebar>) 
 					))}
 				</SidebarSection>
 			</SidebarContent>
+			<Separator />
+			<SidebarFooter>
+				<SidebarSection>
+					<SidebarItem isDisabled>
+						<SidebarLabel className="flex items-center gap-2">
+							<Badge intent="success" className="flex items-center gap-1.5">
+								<IconBrandCopilot className="animate-pulse" />
+								<span>All systems normal</span>
+							</Badge>
+						</SidebarLabel>
+					</SidebarItem>
+				</SidebarSection>
+			</SidebarFooter>
 			<SidebarRail />
 		</Sidebar>
 	)
