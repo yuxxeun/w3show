@@ -40,9 +40,9 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 										"https://static.vecteezy.com/system/resources/previews/006/736/566/large_2x/illustration-file-not-found-or-404-error-page-free-vector.jpg"
 									}
 									alt="banner"
-									className="object-cover object-center rounded-lg aspect-[16/9]"
-									height={786}
-									width={1200}
+									className="object-cover object-center rounded-lg"
+									height={730}
+                          			width={1584}
 								/>
 							</div>
 						</div>
