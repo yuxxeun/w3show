@@ -42,7 +42,7 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 									alt="banner"
 									className="object-cover object-center rounded-lg"
 									height={730}
-                          			width={1584}
+									width={1584}
 								/>
 							</div>
 						</div>

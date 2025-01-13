@@ -169,4 +169,39 @@
 		--chart-4: oklch(0.809 0.105 251.813);
 		--chart-5: oklch(0.882 0.059 254.128);
 	}
+
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: var(--border) transparent;
+	}
+
+	html {
+		font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+		font-variation-settings: normal;
+		scroll-behavior: smooth;
+		height: 100%;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-tap-highlight-color: transparent;
+	  }
+	  ::-webkit-scrollbar {
+		width: 4px;
+	  }
+	
+	  ::-webkit-scrollbar-track {
+		background: transparent;
+	  }
+	
+	  ::-webkit-scrollbar-thumb {
+		background: var(--border);
+		border-radius: 4px;
+	  }
+}
+
+@utility scrollbar-hidden {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	&::-webkit-scrollbar {
+	  display: none; 
+	}
 }
