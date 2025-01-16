@@ -6,7 +6,7 @@ import dayjs from "dayjs"
 import { IconBrandGithub } from "justd-icons"
 import { usePathname } from "next/navigation"
 import React, { useEffect, useState } from "react"
-import { Breadcrumbs, buttonStyles, Link, Separator, SidebarNav, SidebarTrigger } from "ui"
+import { buttonStyles, Link, Separator, SidebarNav, SidebarTrigger } from "ui"
 
 export default function AppSidebarNav() {
 	const pathname = usePathname()
@@ -15,7 +15,7 @@ export default function AppSidebarNav() {
 
 	useEffect(() => {
 		const intervalId = setInterval(() => {
-			setCurrentTime(dayjs().format("dddd DD MMM YYYY / h:mm:ss"))
+			setCurrentTime(dayjs().format("ddd, DD MMM YYYY / h:mm:ss"))
 		}, 1000)
 
 		return () => clearInterval(intervalId)
@@ -26,15 +26,9 @@ export default function AppSidebarNav() {
 			<span className="flex items-center gap-x-4">
 				<SidebarTrigger className="-mx-2" />
 				<Separator className="@md:block hidden h-6" orientation="vertical" />
-				<Breadcrumbs className="@md:flex hidden">
-					{pathSegments.map((segment, index) => (
-						<Breadcrumbs.Item key={index} href={`/${pathSegments.slice(0, index + 1).join("/")}`}>
-							<p className="font-mono">
-								{currentTime} {dayjs().format("a")}
-							</p>
-						</Breadcrumbs.Item>
-					))}
-				</Breadcrumbs>
+					<p className="flex items-center gap-2 text-sm font-mono lg:text-md text-muted-fg font-bold">
+						{currentTime} {dayjs().format("a")}
+					</p>
 			</span>
 
 			<div className="ml-auto flex items-center gap-x-1">
