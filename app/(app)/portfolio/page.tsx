@@ -3,7 +3,6 @@ import type { Metadata } from "next"
 import Resources from "./resources"
 import { getAllPortfolioMdxFiles } from "@/utils/portfolio"
 import { Container } from "@/components/ui"
-import Seo from "@/components/seo"
 
 export const metadata: Metadata = {
 	title: "Portfolio",
@@ -25,7 +24,6 @@ export default async function Page() {
 
 	return (
 		<>
-			<Seo />
 			<div className="py-6 mb-8">
 				<Header
 					title="Portfolio"

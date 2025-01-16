@@ -1,5 +1,3 @@
-"use client"
-
 import { siteConfig } from "@/resources/config/site"
 import { NextSeo } from "next-seo"
 

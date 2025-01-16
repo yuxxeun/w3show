@@ -3,7 +3,6 @@ import { Container } from "@/components/container"
 import type { Metadata } from "next"
 import Resources from "./resources"
 import { getAllResourcesMdxFiles } from "@/utils/resources"
-import Seo from "@/components/seo"
 
 export const metadata: Metadata = {
 	title: "Resources",
@@ -25,7 +24,6 @@ export default async function Page() {
 
 	return (
 		<>
-			<Seo />
 			<div className="py-6 mb-8">
 				<Header
 					title="Resources behind the code"

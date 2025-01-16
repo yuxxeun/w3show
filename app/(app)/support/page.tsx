@@ -5,7 +5,6 @@ import Welcome from "@/components/section/support/content.mdx"
 import { Badge, DescriptionList, Heading, Link } from "@/components/ui"
 import { siteConfig } from "@/resources/config/site"
 import { IconHeart, IconStar } from "justd-icons"
-import Seo from "@/components/seo"
 
 export const metadata: Metadata = {
 	title: "Support",
@@ -15,7 +14,6 @@ export const metadata: Metadata = {
 export default function Page() {
 	return (
 		<>
-			<Seo />
 			<div className="py-6 mb-8">
 				<Header title="Support Guidelines" description="The proper way to support the project." />
 				<Container>

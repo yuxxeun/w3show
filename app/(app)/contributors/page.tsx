@@ -2,7 +2,6 @@ import { Header } from "@/components/header"
 import type { Metadata } from "next"
 import Resources from "./resources"
 import { getAllContributorsMdxFiles } from "@/utils/contributors"
-import Seo from "@/components/seo"
 
 export const metadata: Metadata = {
 	title: "Portfolio",
@@ -24,7 +23,6 @@ export default async function Page() {
 
 	return (
 		<>
-			<Seo />
 			<div className="py-6 mb-8">
 				<Header
 					title="Contributors"

@@ -2,7 +2,6 @@ import { Header } from "@/components/header"
 import { Container } from "@/components/container"
 import type { Metadata } from "next"
 import Welcome from "@/components/section/guide/content.mdx"
-import Seo from "@/components/seo"
 
 export const metadata: Metadata = {
 	title: "Guide",
@@ -12,7 +11,6 @@ export const metadata: Metadata = {
 export default function Page() {
 	return (
 		<>
-			<Seo />
 			<div className="py-6 mb-8">
 				<Header
 					title="Contribution Guidelines"
