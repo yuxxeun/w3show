@@ -8,7 +8,6 @@ import {
 	IconArrowUpRight,
 	IconBrandGithub,
 	IconBrandJustd,
-	IconBrandLayers,
 	IconBrandParanoid,
 	IconChevronDown,
 	IconDashboard,

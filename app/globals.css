@@ -183,25 +183,25 @@
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		-webkit-tap-highlight-color: transparent;
-	  }
-	  ::-webkit-scrollbar {
+	}
+	::-webkit-scrollbar {
 		width: 4px;
-	  }
-	
-	  ::-webkit-scrollbar-track {
+	}
+
+	::-webkit-scrollbar-track {
 		background: transparent;
-	  }
-	
-	  ::-webkit-scrollbar-thumb {
+	}
+
+	::-webkit-scrollbar-thumb {
 		background: var(--border);
 		border-radius: 4px;
-	  }
+	}
 }
 
 @utility scrollbar-hidden {
 	-ms-overflow-style: none;
 	scrollbar-width: none;
 	&::-webkit-scrollbar {
-	  display: none; 
+		display: none;
 	}
 }

@@ -29,7 +29,7 @@ export default function AppSidebarNav() {
 				<Breadcrumbs className="@md:flex hidden">
 					{pathSegments.map((segment, index) => (
 						<Breadcrumbs.Item key={index} href={`/${pathSegments.slice(0, index + 1).join("/")}`}>
-							<p>
+							<p className="font-mono">
 								{currentTime} {dayjs().format("a")}
 							</p>
 						</Breadcrumbs.Item>

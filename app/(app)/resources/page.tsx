@@ -3,9 +3,11 @@ import { Container } from "@/components/container"
 import type { Metadata } from "next"
 import Resources from "./resources"
 import { getAllResourcesMdxFiles } from "@/utils/resources"
+import Seo from "@/components/seo"
 
 export const metadata: Metadata = {
 	title: "Resources",
+	description: "A huge thanks to these powerful tools that make this project possible.",
 }
 
 export interface MdxData {
@@ -22,14 +24,17 @@ export default async function Page() {
 	const allMdxData = await getAllResourcesMdxFiles()
 
 	return (
-		<div className="py-6 mb-8">
-			<Header
-				title="Resources behind the code"
-				description="A huge thanks to these powerful tools that make this project possible."
-			/>
-			<Container>
-				<Resources allMdxData={allMdxData} />
-			</Container>
-		</div>
+		<>
+			<Seo />
+			<div className="py-6 mb-8">
+				<Header
+					title="Resources behind the code"
+					description="A huge thanks to these powerful tools that make this project possible."
+				/>
+				<Container>
+					<Resources allMdxData={allMdxData} />
+				</Container>
+			</div>
+		</>
 	)
 }

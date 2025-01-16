@@ -1,15 +1,15 @@
 "use client"
 
+import { siteConfig } from "@/resources/config/site"
 import {
 	IconColorSwatch,
-	IconDashboard,
 	IconHeart,
 	IconMap,
 	IconMagic,
 	IconPackageFill,
 	IconPeople,
-	IconBrandVercel,
 	IconBrandCopilot,
+	IconCube,
 } from "justd-icons"
 import { usePathname } from "next/navigation"
 import {
@@ -36,10 +36,10 @@ export default function AppSidebar(props: React.ComponentProps<typeof Sidebar>) 
 					href="/"
 				>
 					<IconPackageFill className="size-5" />
-					<SidebarLabel className="font-medium">W3Show</SidebarLabel>
+					<SidebarLabel className="font-bold">{siteConfig.name}</SidebarLabel>
 				</Link>
 			</SidebarHeader>
-			<Separator className="-mt-3.5 mb-3.5" />
+			<Separator className="-mt-3.5 mb-1.5" />
 			<SidebarContent>
 				<SidebarSection>
 					{navigation.map((item, index) => (
@@ -69,7 +69,7 @@ export default function AppSidebar(props: React.ComponentProps<typeof Sidebar>) 
 }
 
 const navigation = [
-	{ label: "Home", icon: <IconDashboard />, isCurrent: true, href: "/" },
+	{ label: "Home", icon: <IconCube />, isCurrent: true, href: "/" },
 	{ label: "Portfolio", icon: <IconColorSwatch />, isCurrent: false, href: "/portfolio" },
 	{ label: "Contribution Guide", icon: <IconMap />, isCurrent: false, href: "/guide" },
 	{ label: "Contributors", icon: <IconPeople />, isCurrent: false, href: "/contributors" },

@@ -5,6 +5,7 @@ import { Toast } from "ui"
 import { Analytics } from "@vercel/analytics/next"
 
 import "./globals.css"
+import { siteConfig } from "@/resources/config/site"
 
 const fontSans = localFont({
 	src: "./fonts/GeistVF.woff",
@@ -17,10 +18,9 @@ const fontMono = localFont({
 
 export const metadata: Metadata = {
 	title: {
-		template: "%s — W3Show",
-		default: "W3Show",
+		template: `%s — ${siteConfig.name}`,
+		default: siteConfig.name,
 	},
-	description: "Portfolio of collection of web development.",
 }
 
 export default function RootLayout({
