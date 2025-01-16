@@ -10,12 +10,11 @@ import { buttonStyles, Link, Separator, SidebarNav, SidebarTrigger } from "ui"
 
 export default function AppSidebarNav() {
 	const pathname = usePathname()
-	const pathSegments = pathname.replace(/^\/+|\/+$/, "").split("/")
 	const [currentTime, setCurrentTime] = useState(dayjs().format("dddd, DD MMM YYYY hh:mm:ss"))
 
 	useEffect(() => {
 		const intervalId = setInterval(() => {
-			setCurrentTime(dayjs().format("ddd, DD MMM YYYY / h:mm:ss"))
+			setCurrentTime(dayjs().format("dddd DD MMM YY / h:mm"))
 		}, 1000)
 
 		return () => clearInterval(intervalId)
