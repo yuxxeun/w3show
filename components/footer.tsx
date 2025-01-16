@@ -103,19 +103,19 @@ export function Footer() {
 				</div>
 			</div>
 
-			<div className="-mt-28 -mb-20 sm:-mt-32 relative z-10 flex h-[14rem] flex-col items-center justify-center overflow-hidden text-center">
+			<div className="-mt-24 -mb-20 sm:-mt-32 relative z-10 flex h-[14rem] flex-col items-center justify-center overflow-hidden text-center">
 				<div className="absolute h-32 w-full bg-linear-to-b sm:w-1/2 lg:w-1/4 dark:from-bg dark:via-fg dark:to-bg dark:blur-xl" />
 				<strong className="relative z-10 inline-flex from-bg to-muted font-bold text-[7rem] text-fg leading-none sm:text-[10rem] dark:bg-linear-to-b dark:bg-clip-text dark:text-bg dark:[text-shadow:1px_1px_0_var(--fg),_-1px_-1px_0_var(--fg),_1px_-1px_0_var(--fg),_-1px_1px_0_var(--fg),_1px_0_0_var(--fg),_-1px_0_0_var(--fg),_0_1px_0_var(--fg),_0_-1px_0_var(--fg)]">
 					W3SHOW
 				</strong>
 			</div>
 
-			<Container className="relative z-20 space-y-1.5 border-t bg-bg py-6 text-center text-muted-fg text-sm **:[a]:font-semibold **:[a]:text-fg **:[strong]:font-semibold **:[strong]:text-fg">
+			<Container className="relative z-20 space-y-1.5 border-t bg-bg py-6 text-center text-muted-fg text-sm **:[a]:font-semibold **:[strong]:font-semibold">
 				<p>
 					<strong>
 						{siteConfig.name} &copy; {dayjs().format("YYYY")}
 					</strong>{" "}
-					- Crafted with 💙 by <Link href={siteConfig.links.twitter}>{siteConfig.author}</Link>.
+					- <Link href={siteConfig.license}>MIT License</Link>.
 				</p>
 
 				<p>
