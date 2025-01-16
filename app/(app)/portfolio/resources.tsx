@@ -27,7 +27,7 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 		<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 			{allMdxData.map((frontmatter) => (
 				<div
-					className="relative border rounded-lg p-1.5 bg-bg dark:bg-secondary/30 backdrop-blur-3xl"
+					className="relative h-fit border rounded-lg p-1.5 bg-bg dark:bg-secondary/30 backdrop-blur-3xl"
 					key={frontmatter.fileName}
 				>
 					<Link target="_blank" href={frontmatter.repo} aria-label={frontmatter.site} />
@@ -48,15 +48,15 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 						</div>
 						<Separator className="mt-5" />
 						<Card.Header>
-							<div className="mt-1 w-fit space-y-2">
+							<div className="mt-1 w-fit space-y-1.5">
 								<div>
-									<Badge shape="circle" intent="success" className="">
+									<Badge shape="circle" intent="success">
 										<IconGlobe />
 										{frontmatter.site}
 									</Badge>
 								</div>
 								<div>
-									<Badge className="">
+									<Badge shape="circle">
 										<IconPerson />
 										{frontmatter.author}
 									</Badge>
@@ -64,7 +64,7 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 							</div>
 						</Card.Header>
 						<Card.Content>
-							<div className="-mt-3 flex gap-1">
+							<div className="-mt-1 flex gap-1">
 								{frontmatter.twitter && (
 									<Link
 										aria-label="Github Repository"
@@ -111,7 +111,7 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 							</div>
 						</Card.Content>
 						<Separator />
-						<Card.Footer className="mt-5 flex flex-wrap gap-1">
+						<Card.Footer className="font-mono mt-5 flex flex-wrap gap-1">
 							{frontmatter.stack.map((stackItem, index) => (
 								<Badge key={index} shape="square">
 									{stackItem}

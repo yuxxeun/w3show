@@ -82,10 +82,12 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 									)}
 								</div>
 								<Card.Title>{frontmatter.title}</Card.Title>
-								<Card.Description>{frontmatter.description}</Card.Description>
+								<Card.Description className="font-mono mt-1">
+									{frontmatter.description}
+								</Card.Description>
 							</Card.Header>
 							<Separator className="mb-5" />
-							<Card.Footer className="flex flex-wrap gap-1">
+							<Card.Footer className="font-mono flex flex-wrap gap-1">
 								{frontmatter.category &&
 									frontmatter.category.length > 0 &&
 									frontmatter.category.map((category, index) => (

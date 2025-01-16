@@ -25,9 +25,9 @@ export default function AppSidebarNav() {
 			<span className="flex items-center gap-x-4">
 				<SidebarTrigger className="-mx-2" />
 				<Separator className="@md:block hidden h-6" orientation="vertical" />
-					<p className="flex items-center gap-2 text-sm font-mono lg:text-md text-muted-fg font-bold">
-						{currentTime} {dayjs().format("a")}
-					</p>
+				<p className="flex items-center gap-2 text-sm font-mono lg:text-md text-muted-fg font-bold">
+					{currentTime} {dayjs().format("a")}
+				</p>
 			</span>
 
 			<div className="ml-auto flex items-center gap-x-1">
