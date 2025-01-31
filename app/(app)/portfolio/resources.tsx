@@ -1,17 +1,8 @@
 "use client"
 
-import { Container } from "@/components/container"
-import {
-	IconBrandGithub,
-	IconBrandX,
-	IconChainLink,
-	IconGlobe,
-	IconGlobe2,
-	IconPerson,
-	IconWindowVisit,
-} from "justd-icons"
+import { IconBrandGithub, IconBrandX, IconGlobe, IconPerson, IconWindowVisit } from "justd-icons"
 import Image from "next/image"
-import { Badge, buttonStyles, Card, Link, Separator, Tooltip } from "ui"
+import { Badge, buttonStyles, Card, Link, Separator } from "ui"
 import { MdxData } from "./page"
 
 interface ResourcesProps {

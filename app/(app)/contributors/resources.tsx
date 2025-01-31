@@ -6,7 +6,6 @@ import {
 	IconBrandGithub,
 	IconBrandX,
 	IconBug,
-	IconChainLink,
 	IconColorPalette,
 	IconComputer,
 	IconWindowVisit,
