@@ -67,7 +67,7 @@ export function Footer() {
 						</div>
 						<div className="md:grid md:grid-cols-2 md:gap-8">
 							<div>
-								<h3 className="font-semibold text-fg text-sm leading-6">Labs</h3>
+								<h3 className="font-semibold text-fg text-sm leading-6">Extra</h3>
 								<ul className="font-mono mt-6 space-y-4">
 									{navigation.labs.map((item) => (
 										<li key={item.name}>
