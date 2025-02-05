@@ -13,6 +13,7 @@ export const siteConfig = {
 	license: "https://github.com/yuxxeun/w3show/blob/main/LICENSE",
 	supportedPlatform: {
 		gh_sponsor: "https://github.com/sponsors/yuxxeun",
+		paypal: "https://paypal.me/yuxxeun",
 	},
 }
 
