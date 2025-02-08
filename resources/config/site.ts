@@ -2,7 +2,7 @@ export const siteConfig = {
 	name: "W3Show",
 	url: "https://w3show.vercel.app",
 	description:
-		"Portfolio Hub for Developers and Designers: A curation of awesome portfolio website ideas for developers and designers to draw inspiration from.",
+		"Portfolio Hub for everyone: A curation of awesome portfolio website ideas for everyone to draw inspiration from.",
 	author: "yuxxeun",
 	links: {
 		twitter: "https://x.com/yuxxeun",

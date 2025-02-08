@@ -50,7 +50,7 @@ export function Hero() {
 							Stars sustain energy
 						</Link>
 						<h1 className="mt-4 mb-4 max-w-3xl font-bold text-2xl tracking-tight lg:mb-6 lg:text-4xl">
-							The Ultimate Portfolio Hub for Developers and Designers.
+							The Ultimate Portfolio Hub for Everyone.
 						</h1>
 						<p className="block max-w-3xl text-base text-muted-fg leading-relaxed md:leading-relaxed lg:text-xl [&_strong]:font-medium">
 							<strong className="text-fg">{siteConfig.name}</strong> is a {siteConfig.description}
