@@ -55,7 +55,10 @@ export default function AppSidebar(props: React.ComponentProps<typeof Sidebar>) 
 				<SidebarSection>
 					<SidebarItem isDisabled>
 						<SidebarLabel className="flex items-center gap-2">
-							<Badge intent="success" className="flex items-center gap-1.5 font-mono">
+							<Badge
+								intent="success"
+								className="flex items-center gap-1.5 font-mono font-extrabold capitalize"
+							>
 								<IconBrandCopilot className="animate-pulse" />
 								<span>All systems normal</span>
 							</Badge>
