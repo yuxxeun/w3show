@@ -37,7 +37,7 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 									{frontmatter.twitter && (
 										<Link
 											className={buttonStyles({
-												appearance: "outline",
+												intent: "outline",
 												size: "square-petite",
 											})}
 											href={
@@ -56,7 +56,7 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 											href={frontmatter.github}
 											target="_blank"
 											className={buttonStyles({
-												appearance: "outline",
+												intent: "outline",
 												size: "square-petite",
 											})}
 										>
@@ -73,7 +73,7 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 											}
 											target="_blank"
 											className={buttonStyles({
-												appearance: "outline",
+												intent: "outline",
 												size: "square-petite",
 											})}
 										>

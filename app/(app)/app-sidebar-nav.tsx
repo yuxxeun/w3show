@@ -35,7 +35,7 @@ export default function AppSidebarNav() {
 				<Link
 					aria-label="Github Repository"
 					className={buttonStyles({
-						appearance: "outline",
+						intent: "outline",
 						size: "square-petite",
 						className: "**:data-[slot=icon]:text-fg",
 					})}

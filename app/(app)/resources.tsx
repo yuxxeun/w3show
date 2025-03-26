@@ -38,7 +38,7 @@ export function Resources() {
 									<Tooltip>
 										<Tooltip.Trigger
 											className={buttonStyles({
-												appearance: "outline",
+												intent: "outline",
 												size: "square-petite",
 											})}
 										>

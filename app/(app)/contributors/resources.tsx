@@ -83,7 +83,7 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 										<Link
 											aria-label="Github Repository"
 											className={buttonStyles({
-												appearance: "outline",
+												intent: "outline",
 												size: "square-petite",
 												className: "**:data-[slot=icon]:text-fg",
 											})}
@@ -97,7 +97,7 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 										<Link
 											aria-label="Github Repository"
 											className={buttonStyles({
-												appearance: "outline",
+												intent: "outline",
 												size: "square-petite",
 												className: "**:data-[slot=icon]:text-fg",
 											})}
@@ -112,7 +112,7 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 										<Link
 											aria-label="Github Repository"
 											className={buttonStyles({
-												appearance: "outline",
+												intent: "outline",
 												size: "square-petite",
 												className: "**:data-[slot=icon]:text-fg",
 											})}
@@ -133,7 +133,7 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 											<Tooltip.Trigger
 												aria-label={`Role: ${roleItem}`}
 												className={buttonStyles({
-													appearance: "outline",
+													intent: "outline",
 													size: "square-petite",
 												})}
 											>
