@@ -13,9 +13,7 @@ export function Header({ title, description }: HeaderProps) {
 		<header className="-mt-6 mb-12 border-b py-6 sm:py-12">
 			<Container>
 				<Card.Header className="max-w-xl p-0">
-					<Card.Title className="text-xl sm:text-2xl">
-						{title}
-					</Card.Title>
+					<Card.Title className="text-xl sm:text-2xl">{title}</Card.Title>
 					<Card.Description className="font-mono text-sm sm:text-base">{description}</Card.Description>
 				</Card.Header>
 			</Container>
