@@ -128,8 +128,8 @@ export function Footer() {
 						Tailwind CSS
 					</Link>
 					,{" "}
-					<Link href="https://getjustd.com" target="_blank">
-						JustD
+					<Link href="https://intentui.com" target="_blank">
+						Intent UI
 					</Link>{" "}
 					&{" "}
 					<Link href="https://vercel.com" target="_blank">
