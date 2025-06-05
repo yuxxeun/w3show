@@ -10,15 +10,15 @@
 
 After cloning the project, you should install dependencies on the project directory:
 ```shell
-bun install
+pnpm install
 ```
 Running development server
 ```shell
-bun dev
+pnpm dev
 ```
 Build production preview
 ```bash
-bun run build
+pnpm run build
 ```
 ## Submit your site
 Read how to submit your portfolio on [contribution guide](./components//section//guide//content.mdx).
