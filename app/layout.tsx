@@ -30,7 +30,7 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang="en" suppressHydrationWarning={true} className={`${fontSans.variable} ${fontMono.variable}`}>
+		<html lang="en" suppressHydrationWarning={true} className={`${fontSans.variable} ${fontMono.variable} dark`}>
 			<body className="min-h-svh antialiased">
 				<Toast />
 				<Providers>

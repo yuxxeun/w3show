@@ -1,15 +1,12 @@
 "use client"
 
-import { ThemeSwitcher } from "@/components/theme-switcher"
 import { siteConfig } from "@/resources/config/site"
 import dayjs from "dayjs"
 import { IconBrandGithub } from "justd-icons"
-import { usePathname } from "next/navigation"
 import React, { useEffect, useState } from "react"
 import { buttonStyles, Link, Separator, SidebarNav, SidebarTrigger } from "ui"
 
 export default function AppSidebarNav() {
-	const pathname = usePathname()
 	const [currentTime, setCurrentTime] = useState(dayjs().format("dddd, DD MMM YYYY hh:mm:ss"))
 
 	useEffect(() => {
@@ -31,7 +28,6 @@ export default function AppSidebarNav() {
 			</span>
 
 			<div className="ml-auto flex items-center gap-x-1">
-				<ThemeSwitcher />
 				<Link
 					aria-label="Github Repository"
 					className={buttonStyles({

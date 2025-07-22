@@ -102,7 +102,7 @@ export default function Resources({ allMdxData }: ResourcesProps) {
 							</div>
 						</Card.Content>
 						<Separator orientation="horizontal" />
-						<Card.Footer className="font-mono flex flex-wrap gap-1">
+						<Card.Footer className="flex flex-wrap gap-1">
 							{frontmatter.stack.map((stackItem, index) => (
 								<Badge key={index} shape="square">
 									{stackItem}
