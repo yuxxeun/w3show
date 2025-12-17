@@ -8,17 +8,13 @@ import dayjs from "dayjs"
 const navigation = {
 	supports: [
 		{ name: "Github Star", href: "https://github.com/yuxxeun/w3show" },
-		{ name: "Nih Buat Jajan", href: "https://www.nihbuatjajan.com/yuxxeun" },
 	],
 	resources: [
-		{ name: "Adobe React Aria", href: "https://react-spectrum.adobe.com/index.html" },
 		{ name: "Intent UI", href: "https://intentui.com" },
 		{ name: "Icons", href: "https://intentui.com/icons" },
 	],
 	labs: [
 		{ name: "Github", href: "https://github.com/yuxxeun/w3show" },
-		{ name: "X (Twitter)", href: "https://x.com/yuxxeun" },
-		{ name: "Instagram", href: "https://instagram.com/yuxxeun" },
 	],
 	legal: [{ name: "MIT License", href: "https://github.com/yuxxeun/w3show/blob/main/LICENSE" }],
 }
@@ -114,13 +110,7 @@ export function Footer() {
 
 			<Container className="relative z-20 space-y-2 border-t bg-bg py-8 text-center text-sm text-muted-fg [&_a]:font-semibold [&_strong]:font-semibold">
 				<p>
-					Powered by <Link href="https://nextjs.org" target="_blank">Next.js</Link>,{" "}
-					<Link href="https://intentui.com" target="_blank">Intent UI</Link>, and{" "}
-					<Link href="https://vercel.com" target="_blank">Vercel</Link>.
-				</p>
-				<p>
-					Source code on{" "}
-					<Link href="https://github.com/yuxxeun/w3show" target="_blank">GitHub</Link> • MIT License {dayjs().year()}
+					&copy; {dayjs().year()} &bull; MIT License 
 				</p>
 			</Container>
 		</footer>

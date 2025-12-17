@@ -7,13 +7,15 @@ import React, { useEffect, useState } from "react"
 import { buttonStyles, Link, Separator, SidebarNav, SidebarTrigger } from "ui"
 
 export default function AppSidebarNav() {
-	const [currentTime, setCurrentTime] = useState(dayjs().format("dddd, DD MMM YYYY hh:mm:ss"))
+	const [currentTime, setCurrentTime] = useState<string | null>(null)
 
 	useEffect(() => {
+		setCurrentTime(dayjs().format("dddd DD MMM YY / h:mm"))
+		
 		const intervalId = setInterval(() => {
 			setCurrentTime(dayjs().format("dddd DD MMM YY / h:mm"))
 		}, 1000)
-
+		
 		return () => clearInterval(intervalId)
 	}, [])
 

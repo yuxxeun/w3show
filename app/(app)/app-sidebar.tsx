@@ -3,11 +3,8 @@
 import { siteConfig } from "@/resources/config/site"
 import {
 	IconColorSwatch,
-	IconHeart,
 	IconMap,
-	IconMagic,
 	IconPackageFill,
-	IconPeople,
 	IconBrandCopilot,
 	IconCube,
 } from "justd-icons"
@@ -75,7 +72,4 @@ const navigation = [
 	{ label: "Home", icon: <IconCube />, isCurrent: true, href: "/" },
 	{ label: "Portfolio", icon: <IconColorSwatch />, isCurrent: false, href: "/portfolio" },
 	{ label: "Contribution Guide", icon: <IconMap />, isCurrent: false, href: "/guide" },
-	{ label: "Contributors", icon: <IconPeople />, isCurrent: false, href: "/contributors" },
-	{ label: "Support", icon: <IconHeart />, isCurrent: false, href: "/support" },
-	{ label: "Resources", icon: <IconMagic />, isCurrent: false, href: "/resources" },
 ]
