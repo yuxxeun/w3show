@@ -52,8 +52,5 @@
 		"fs": false,
 		"os": false,
 		"path": false
-	},
-	"engines": {
-		"node": "20.x"
 	}
 }
